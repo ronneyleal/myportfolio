@@ -339,12 +339,13 @@ h1 {
   height: 30rem;
   position: relative;
   background: var(--second-color);
-  justify-content: center;
-  align-items: center;
   margin: 1rem;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  border-radius: 1rem;
+  justify-content: space-between;
 }
 
 #cursos .card::before {
@@ -359,12 +360,13 @@ h1 {
 }
 
 #cursos .card .content {
-  padding: 0.5rem;
+  padding: .5rem;
   text-align: center;
-  justify-content: center;
+  height: 100%;
 }
 
 #cursos .card .content h2 {
+  margin-top: 1rem;
   font-size: 3.5rem;
   font-weight: 700;
   color: var(--light-color);
@@ -374,13 +376,14 @@ h1 {
   line-height: 3rem;
 }
 
-#cursos .card:hover .content h2{
+#cursos .card:hover .content h2,
+#cursos .card:hover .content h3{
   opacity: 1;
   transform: translateY(-1rem);
 }
 
 #cursos .card .content h3{
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
   position: relative;
   font-size: 1.5rem;
   color: var(--lightning-color);
@@ -390,44 +393,36 @@ h1 {
   transition: 0.5s;
 }
 
-.circle{
-  counter-reset: list-counter;
-  list-style: none;
-  text-align: left;
-  margin-bottom: 1rem;
-}
-.circle li{
-  margin: .5em 0;
+#cursos .card .content p {
   opacity: 0.5;
-  transition: 0.5s;   
-}
-
-.circle li:before{
-  content: counter(list-counter);
-  counter-increment: list-counter;
-  width: 1em;
-  height: 1em;
+  transition: 0.5s;
+  text-align: left;
   padding: .5em;
-  margin-right: 1em;
-  border-radius: 50%;
-  border: .2rem solid var(--lightning-color);
-  background: var(--middle-color);
   color: var(--lightning-color);
   font-family: var(--poppins-font);
-  font-weight: 700;
-  text-align: center;
-  display: inline-block;
-  line-height: 1rem;
+  font-weight: 400;
+  justify-content: center;
 }
 
-#cursos .card:hover .content h3,
-#cursos .card:hover .content .circle li{
+#cursos .card:hover .content p{
   opacity: 1;
 }
 
+#cursos .card .content h3 > span {
+  padding-bottom: .5rem;
+  position: relative;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  z-index: 2;
+  opacity: 0.5;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
 #cursos .card .content a {
-  display: inline-block ;
-  margin-top: 0.5rem;
+  display: inline-block;
+  bottom: 0;
+  text-align: center;
   padding: .5rem 1rem;
   background: var(--lightning-color);
   color: var(--middle-color);
@@ -442,4 +437,99 @@ h1 {
   color: var(--primary-color);
   box-shadow: 0 0 10px var(--neon-color), 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
   transform: scale(1.1);
+}
+
+#cursos .card > span {
+  transition: 0.5;
+  opacity: 0;
+}
+
+#cursos .card:hover > span {
+  opacity: 1;
+}
+
+#cursos .card > span:nth-child(1){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background: linear-gradient(to right, transparent, var(--neon-color));
+  animation: animatecard1 2s linear infinite;
+  box-shadow: 0 0 10px var(--neon-color), 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
+}
+
+@keyframes animatecard1 {
+  0%{
+    transform: translateX(-100%);
+  }
+
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+#cursos .card > span:nth-child(2){
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.2rem;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--neon-color));
+  animation: animatecard2 2s linear infinite;
+  animation-delay: 1s;
+  box-shadow: 0 0 10px var(--neon-color), 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
+}
+
+@keyframes animatecard2 {
+  0%{
+    transform: translateY(-100%);
+  }
+
+  100%{
+    transform: translateY(100%);
+  }
+}
+
+#cursos .card > span:nth-child(3){
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background: linear-gradient(to left, transparent, var(--neon-color));
+  animation: animatecard3 2s linear infinite;
+  box-shadow: 0 0 10px var(--neon-color), 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
+}
+
+@keyframes animatecard3 {
+  0%{
+    transform: translateX(100%);
+  }
+
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+#cursos .card > span:nth-child(4){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.2rem;
+  height: 100%;
+  background: linear-gradient(to top, transparent, var(--neon-color));
+  animation: animatecard4 2s linear infinite;
+  animation-delay: 1s;
+  box-shadow: 0 0 10px var(--neon-color), 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
+}
+
+@keyframes animatecard4 {
+  0%{
+    transform: translateY(100%);
+  }
+
+  100%{
+    transform: translateY(-100%);
+  }
 }
