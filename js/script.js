@@ -34,3 +34,16 @@ window.addEventListener('scroll', function () {
 
 })
 
+document.addEventListener('mouseenter', changelogo)
+
+function changelogo() {
+  let ronneydev = document.getElementById('ronney')
+  
+  if (ronneydev.addEventListener('mouseover', function (e) {
+      ronneydev.src = "images/ronneydev2.png"
+  })); 
+  else (ronneydev.addEventListener('mouseout', function (e) {
+    ronneydev.src = "images/ronneydev.png"
+}));
+}
+

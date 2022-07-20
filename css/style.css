@@ -21,12 +21,14 @@
   --light-color: #468E99;
   --lightning-color: #F4F2F4;
   --neon-color: #00fcff;
+  --gray-color: #a5a5a5;
 
   /* fonts */
   --dance-font: 'Dancing Script', cursive;
   --dmsans-font: 'DM Sans', sans-serif;
   --poppins-font: 'Poppins', sans-serif;
   --signika-font: 'Signika', sans-serif;
+  --noto-font: 'Noto Sans', sans-serif;
 }
 
 body {
@@ -123,7 +125,7 @@ body {
   height: 98vh;
   width: 85vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 0 3rem;
   align-items: center;
   margin: auto;
@@ -135,6 +137,10 @@ body {
   padding-top: 2rem;
   justify-content: center;
   margin: auto;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 div.packicons {
@@ -142,6 +148,8 @@ div.packicons {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  margin-left: 13rem;
+
 }
 
 img.icons {
@@ -152,57 +160,53 @@ img.icons {
 
 img.icons:hover {
   filter: invert(79%) sepia(33%) saturate(7486%) hue-rotate(135deg) brightness(94%) contrast(80%);
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: 0.3s;
-  height: 3.5rem;
-  width: 3.5rem;
-}
-
-h1 {
- text-align: center;
- font-family: var(--signika-font);
- font-weight: 700;
- color: var(--lightning-color);
- font-size: 2rem;
- padding-top: 1rem;
 }
 
 #ronney{
-  width: 30rem;
+  width: 40rem;
   position: relative;
   z-index: 1;
+  margin: auto;
+  margin-left: 15rem;
+  transition: 0.2s;
 }
 
-#ronneydev{
+#ronney-rf{
+  width: 40rem;
+  position: relative;
+  margin: auto;
+  margin-left: 16rem;
+}
+
+#ronney:hover, #ronney:hover ~ #ronney-rf{
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0 0 0.4rem var(--neon-color));
+  transition: 0.2s;
+}
+
+.frontend {
   font-family: var(--signika-font);
   font-weight: 700;
-  font-size: 3rem;
+  color: var(--lightning-color);
+  font-size: 2rem;
+  padding-top: 1rem;
   position: relative;
-  z-index: 1;
-  text-align: center;
-  align-items: center;
-}
+  margin-left: 14rem;
+ }
 
-#ronneydev > span{
-  font-family: var(--signika-font);
-  font-weight: 700;
-  font-size: 3rem;
-  position: relative;
-  z-index: 1;
+.frontend:hover{
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0 0 0.4rem var(--neon-color));
+  transition: 0.2s;
 }
-
-#ronneydev > span:nth-child(2){
-  font-family: var(--signika-font);
-  font-weight: 700;
-  font-size: 2.5rem;
-  position: relative;
-  z-index: 1;
-}
-
 
 #circle {
   width: 55rem;
   z-index: -1;
+  position: relative;
+  right: 5rem;
   padding-top: calc(2rem + var(--header-height));
 }
 
@@ -210,7 +214,7 @@ h1 {
   position: absolute;
   width: 48rem;
   z-index: 1;
-  right: -6.2rem;
+  right: -6rem;
   padding-top: calc(2rem + var(--header-height));
 }
 
@@ -244,6 +248,7 @@ h1 {
   align-items: center;
   /* margin: auto 15rem; */
   z-index: 0;
+  overflow: hidden;
 }
 
 .about-img {
@@ -252,8 +257,6 @@ h1 {
   height: 40rem;
   display: flex;
   justify-content: center;
-  /* background: linear-gradient(45deg, var(--middle-color), var(--primary-color)); */
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.20); */
   border-radius: 30px;
   background-size: 500px;
   -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, #04cad13f);
@@ -353,26 +356,63 @@ h1 {
 /* CURSOS */
 
 #cursos {
-  width: 95vw;
+  height: 98vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#cursos .cursos-title{
+  width: 100vw;
+  text-align: center;
+  margin-top: calc(var(--header-height) + 4rem);
+  background: linear-gradient(to right, transparent 10%, transparent 15%, var(--light-color), transparent 85%, transparent 100%);
+}
+
+#cursos .cursos-title h2{
+  position: relative;
+  font-family: var(--poppins-font);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--lightning-color);
+  text-shadow: .1rem .1rem .5rem var(--second-color);
+  text-transform: uppercase;
+}
+
+#cursos .cursos-title > h2 > span:nth-child(1){
+  position: relative;
+  font-family: var(--signika-font);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--middle-color);
+  text-shadow: none;
+  transition: 0.5s;
+}
+
+#cards {
+  bottom: 4rem;
+  width: 100%;
+  height: 70%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-#cursos .card {
+#cards .card {
   min-width: 25rem;
-  width: calc(100% / 3 - 8%);
-  height: calc(100% / 2 - 4%);
   position: relative;
   background: var(--second-color);
-  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
   border-radius: 1rem;
+  width: calc(95% / 3 - 10%);
+  height: calc(80% - 2rem);
 }
 
-#cursos .card::before {
+#cards .card::before {
   content: '';
   position: absolute;
   top: 2px;
@@ -383,16 +423,18 @@ h1 {
   pointer-events: none;
 }
 
-#cursos .card .content {
+#cards .card .content {
   padding: .5rem;
   text-align: center;
   height: 100%;
   display: flex;
   flex-direction:column;
+  position: relative;
 }
 
-#cursos .card .content h2 {
-  margin-top: 1rem;
+#cards .card .content h2 {
+  padding-top: 1rem;
+  position: relative;
   font-size: 3rem;
   font-weight: 700;
   color: var(--light-color);
@@ -402,14 +444,15 @@ h1 {
   line-height: 3rem;
 }
 
-#cursos .card:hover .content h2,
-#cursos .card:hover .content h3{
+#cards .card:hover .content h2,
+#cards .card:hover .content h3{
   opacity: 1;
   transform: translateY(-1rem);
 }
 
-#cursos .card .content h3{
-  padding-bottom: .5rem;
+#cards .card .content h3{
+  text-align: center;
+  padding-bottom: .8rem;
   position: relative;
   font-size: 1.5rem;
   color: var(--lightning-color);
@@ -419,7 +462,7 @@ h1 {
   transition: 0.5s;
 }
 
-#cursos .card .content p {
+#cards .card .content p {
   opacity: 0.5;
   transition: 0.5s;
   text-align: left;
@@ -427,15 +470,15 @@ h1 {
   color: var(--lightning-color);
   font-family: var(--arial);
   font-weight: 400;
-  justify-content: center;
   font-size: 0.9rem;
+  justify-content: space-between;
 }
 
-#cursos .card:hover .content p{
+#cards .card:hover .content p{
   opacity: 1;
 }
 
-#cursos .card .content h3 > span {
+#cards .card .content h3 > span {
   padding-bottom: .5rem;
   position: relative;
   font-size: 1.5rem;
@@ -446,7 +489,8 @@ h1 {
   transition: 0.5s;
 }
 
-/* #cursos a {
+#cards .card .content a {
+  display: inline-flex;
   padding: .5rem 1rem;
   background: var(--lightning-color);
   color: var(--middle-color);
@@ -454,49 +498,31 @@ h1 {
   font-weight: 700;
   border-radius: .5rem;
   transition: 0.5s;
-  margin-top: 0.2rem;
   font-size: 0.8rem;
+  text-align: center;
+  position: absolute;
+  margin: 1rem;
+  bottom: 0;
+  align-self: center;
 }
 
-#cursos a:hover {
-  background: var(--neon-color);
-  color: var(--primary-color);
+#cards .card .content a:hover {
+  background: var(--middle-color);
+  color: var(--lightning-color);
   box-shadow: 0 0 10px var(--neon-color), 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
   transform: scale(1.1);
-} */
+}
 
-/* #cursos .card .content a {
-  display: inline-block;
-  text-align: center;
-  padding: .5rem 1rem;
-  background: var(--lightning-color);
-  color: var(--middle-color);
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: .5rem;
-  transition: 0.5s;
-  position: absolute;
-  bottom: 1.5rem;
-  left: 8.7rem;
-} */
-
-/* #cursos .card .content a:hover {
-  background: var(--neon-color);
-  color: var(--primary-color);
-  box-shadow: 0 0 10px var(--neon-color), 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
-  transform: scale(1.1);
-} */
-
-#cursos .card > span {
+#cards .card > span {
   transition: 0.5;
   opacity: 0;
 }
 
-#cursos .card:hover > span {
+#cards .card:hover > span {
   opacity: 1;
 }
 
-#cursos .card > span:nth-child(1){
+#cards .card > span:nth-child(1){
   position: absolute;
   top: 0;
   left: 0;
@@ -517,7 +543,7 @@ h1 {
   }
 }
 
-#cursos .card > span:nth-child(2){
+#cards .card > span:nth-child(2){
   position: absolute;
   top: 0;
   right: 0;
@@ -539,7 +565,7 @@ h1 {
   }
 }
 
-#cursos .card > span:nth-child(3){
+#cards .card > span:nth-child(3){
   position: absolute;
   bottom: 0;
   left: 0;
@@ -560,7 +586,7 @@ h1 {
   }
 }
 
-#cursos .card > span:nth-child(4){
+#cards .card > span:nth-child(4){
   position: absolute;
   top: 0;
   left: 0;
