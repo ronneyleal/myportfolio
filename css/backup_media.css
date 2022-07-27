@@ -1,0 +1,367 @@
+@media (min-width: 1600px){
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav .icon-menu {
+    display: none;
+  }
+
+  .nav{
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .media-icons i{
+    font-size: 6rem;
+  }
+
+  .media-icons i:nth-child(3) {
+    margin-top: 0rem;
+  }
+  .media-icons i:nth-child(4) {
+  margin-bottom: 0rem;
+  }
+
+}
+
+@media (min-width: 1400px){
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav .icon-menu {
+    display: none;
+  }
+
+  .nav{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .media-icons i{
+    font-size: 5rem;
+  }
+
+  #ronney {
+    max-width: 90%;
+    width: 90%;
+  }
+  #ronney-rf {
+    max-width: 90%;
+    width: 90%;
+  }
+  .frontend {
+    font-size: 2rem;
+  }
+  div.packicons {
+    padding-top: 5rem;
+  }
+  img.icons {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+  .media-icons i:nth-child(3) {
+    margin-top: 2rem;
+  }
+  .media-icons i:nth-child(4) {
+  margin-bottom: 2rem;
+  }
+
+}
+
+@media (min-width: 1200px){
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav .icon-menu {
+    display: none;
+  }
+
+  .nav{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .media-icons i{
+    font-size: 4rem;
+  }
+
+  .media-icons i:nth-child(3) {
+    margin-top: 4rem;
+  }
+  .media-icons i:nth-child(4) {
+  margin-bottom: 4rem;
+  }
+
+}
+
+ @media (min-width: 1024px){
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav .icon-menu {
+    display: none;
+  }
+
+  .nav{
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .media-icons i{
+    font-size: 3.5rem;
+  }
+
+  #ronney {
+    max-width: 90%;
+    width: 90%;
+  }
+  #ronney-rf {
+    max-width: 90%;
+    width: 90%;
+  }
+  .frontend {
+    font-size: 2rem;
+  }
+  div.packicons {
+    padding-top: 5rem;
+  }
+  img.icons {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+  .media-icons i:nth-child(3) {
+    margin-top: 6rem;
+  }
+  .media-icons i:nth-child(4) {
+  margin-bottom: 6rem;
+  }
+}
+
+@media (min-width: 768px){
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav .icon-menu {
+    display: none;
+  }
+
+  .nav{
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container {
+    padding: calc(1rem + var(--header-height)) 0 0 0;
+    flex-direction: column;
+    align-items: center;
+}
+.aside {
+  width: 90%;
+  height: 40%;
+  top: 0;
+  margin: 0;
+}
+
+  .media-icons i{
+    font-size: 4.5rem;
+  }
+
+  #ronney {
+    max-width: 90%;
+    width: 90%;
+    margin: 1rem 1rem 0 1rem;
+  }
+  #ronney-rf {
+    max-width: 90%;
+    width: 90%;
+    margin: 0 1rem 1rem 1rem;
+  }
+  .frontend {
+    font-size: 2rem;
+    padding-top: 0;
+  }
+
+  div.packicons {
+    padding-top: 2rem;
+  }
+  img.icons {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+  .aside-r {
+    height: 60%;
+    width: 90%;
+    padding-top: -2rem;
+    bottom: 0;
+    margin: 0;
+}
+
+}
+
+@media (min-width: 560px){
+
+  .nav{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+  }
+
+  .container {
+    padding: calc(0.5rem + var(--header-height)) 0;
+    flex-direction: column;
+    align-items: center;
+}
+.aside {
+  width: 90%;
+  top: 4rem;
+  margin: 0;
+}
+
+  .media-icons i{
+    font-size: 4rem;
+  }
+
+  #ronney {
+    max-width: 90%;
+    width: 90%;
+  }
+  #ronney-rf {
+    max-width: 90%;
+    width: 90%;
+  }
+  .frontend {
+    font-size: 1.7rem;
+    padding-top: 0;
+  }
+  div.packicons {
+    padding-top: 2rem;
+  }
+  img.icons {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .media-icons i:nth-child(3) {
+    margin-top: 1rem;
+  }
+  .media-icons i:nth-child(4) {
+  margin-bottom: 1rem;
+  }
+
+  .aside-r {
+    height: 100%;
+    width: 100%;
+    bottom: -2rem;
+}
+
+}
+
+@media (min-width: 425px){
+  .nav{
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container {
+    padding: calc(0.5rem + var(--header-height)) 0;
+    flex-direction: column;
+    align-items: center;
+}
+.aside {
+  width: 100%;
+  top: 4rem;
+  margin: 0;
+}
+
+  .media-icons i{
+    font-size: 3rem;
+  }
+
+  #ronney {
+    max-width: 100%;
+    width: 100%;
+  }
+  #ronney-rf {
+    max-width: 90%;
+    width: 90%;
+  }
+  .frontend {
+    font-size: 1.2rem;
+    padding-top: 0;
+  }
+  div.packicons {
+    padding-top: 1rem;
+  }
+  img.icons {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+  .media-icons i:nth-child(3) {
+    margin-top: 1rem;
+  }
+  .media-icons i:nth-child(4) {
+    margin-bottom: 1rem;
+  }
+
+  .aside-r {
+    height: 50%;
+    width: 50%;
+    bottom: -2rem;
+}
+}
+
+@media (min-width: 320px) and (max-width: 424px){
+  
+}

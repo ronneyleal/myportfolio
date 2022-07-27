@@ -1,166 +1,581 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ronney&reg;Dev</title>
-     <!-- Link Swiper's CSS -->
-     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-     <!-- css local -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Dancing+Script:wght@400;700&family=Noto+Sans:wght@400;700&family=Poppins:wght@400;700&family=Signika:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header id="header">
-    <nav class="nav">
-      <a class="logo" href="#">My <span>Portfolio</span></a>
-      <div class="menu">
-        <ul class="grid">
-          <li><a class="title" href="#home">Início</a></li>
-          <li><a class="title" href="#about">Sobre</a></li>
-          <li><a class="title" href="#courses">Cursos</a></li>
-          <li><a class="title" href="#certificates">Certificados</a></li>
-          <li><a class="title" href="#contact">Contato</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <!-- <div class="divider-1"></div> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ronneydev</title>
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Fonte Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css local -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Dancing+Script:wght@400;700&family=Noto+Sans:wght@400;700&family=Poppins:wght@400;700&family=Signika:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="nav">
+        <a class="logo" href="#home">My <span>Portfolio</span></a>
+        <div class="menu">
+          <ul class="grid-nav">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#courses">Cursos</a></li>
+            <li><a class="title" href="#certificates">Certificados</a></li>
+            <li><a class="title2" href="#contact">Contato</a></li>
+          </ul>
+        </div>
 
-  <main>
+        <div class="toggle icon-menu"><i class="fa-solid fa-bars"></i></div>
+        <div class="toggle icon-close"><i class="fa-solid fa-x"></i></div>
+      </nav>
+    </header>
+    <!-- <div class="divider-1"></div> -->
+
+    <main>
       <section class="container" id="home">
         <div class="aside">
-          <img data-speed="-9" class="" id="ronney" src="images/ronneydev.png" alt="logo ronneydev">
-          <img data-speed="-9" class="" id="ronney-rf" src="images/ronneydev3.png">
-        <img class="layer" data-speed="6" id="circleback" src="images/ronny.png" alt="foto ronney">
-        <h1 class="frontend" data-speed="-6">FRONT-END DEVELOPER</h1>
-        <div class="packicons">
-        <a class="" data-speed="2" href="https://www.linkedin.com/in/ronneyleal"><img class="icons "  src="icons/linkedin.svg" alt="perfil do linkedin"></a>
-        <a class="" data-speed="2" href="https://github.com/ronneyleal"><img class="icons "  src="icons/github.svg" alt="perfil do github"></a>
-        <a class="" data-speed="2" href="https://www.instagram.com/ronney.leal/"><img class="icons "  src="icons/instagram.svg" alt="perfil do instagram"></a>
+          <img onmouseenter="changelogo()" id="ronney" src="images/ronneydev.png" alt="logo ronneydev" />
+          <img id="ronney-rf" src="images/ronneydev3.png" />
+          <h1 class="frontend">FRONT-END DEVELOPER</h1>
+          <div class="packicons">
+            <a href="https://www.linkedin.com/in/ronneyleal"
+              ><img
+                class="icons"
+                src="icons/linkedin.svg"
+                alt="perfil do linkedin"
+            /></a>
+            <a href="https://github.com/ronneyleal"
+              ><img class="icons" src="icons/github.svg" alt="perfil do github"
+            /></a>
+            <a href="https://www.instagram.com/ronney.leal/"
+              ><img
+                class="icons"
+                src="icons/instagram.svg"
+                alt="perfil do instagram"
+            /></a>
+          </div>
+        </div>
+        <div class="aside-r">
+          <img id="circle" src="images/ronny.png" alt="imagem de um cirulo com efeitos" />
+          <div class="media-icons">
+            <i title="html 5" alt="html 5" class="fa-brands fa-html5"></i>
+            <i title="css 3" alt="css 3" class="fa-brands fa-css3-alt"></i>
+            <i title="javascript" alt="javascript" class="fa-brands fa-js"></i>
+            <i title="reactjs" alt="reactjs" class="fa-brands fa-react"></i>
+          </div>
+        </div>
+      </section>
+      <div class="divider-2"></div>
+
+      <!-- ABOUT -->
+      <section class="container" id="about">
+        <div class="about-img">
+          <div class="img-content">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="images/dev1.jpg" alt="imagem de um computador" />
+          </div>
+
+          <div class="img-content">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="images/dev3.jpg" alt="imagem de um computador" />
+          </div>
+
+        </div>
+        <div class="about-text">
+          <h2>SOBRE MIM</h2>
+          <h3>Desenvolvedor <span>Front-end</span></h3>
+          <p>
+            Me chamo Ronney Leal, tenho 30 anos e sou casado há 7 anos, aos 15
+            anos pela primeira vez tive contato com um computador e a partir
+            desse dia eu me tornei um entusiasta por tecnologia, logo me
+            interessei em aprender novas funcionalidades, edições simples de
+            vídeo e áudio, a fazer download e hospedagem de jogos, o que me
+            levou a criar um blog de games, onde eu compartilhava jogos com a
+            comunidade, e nessa mesma época aprendi a fazer manutenção e reparos
+            no computador, aos 18 anos ingressei formalmente no mercado de
+            trabalho como designer, já utilizando ferramentas como photoshop e
+            corel draw, atuando por 4 anos. Aos, 19 anos fui aprovado no curso
+            Ciência da Computação na UFPI, com indisponibilidade de cursar
+            devido a carga horária, foi então que em 2013 ingressei na faculdade
+            para cursar Ciências Contábeis e logo no ano seguinte, 2014 fui
+            contratado em uma nova empresa como auxiliar de departamento
+            financeiro, onde logo me destaquei, passando a ser encarregado do
+            setor e permanecendo ali por 7 anos. Em 2017 concluí o curso de
+            ciências contábeis, bem como a aprovação no CFC. E agora em 2022
+            decidi seguir a área que sempre me atraiu, a tecnologia, passei a
+            estudar desenvolvimento fullstack, tendo adentrado mais no
+            front-end, onde espero me tornar um excelente dev e assim contribuir
+            com aplicações úteis que possam de alguma forma facilitar a vida das
+            pessoas.
+          </p>
+
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1a4zwjGlgiI_8tnkfa47AMkoxXqiUsxFs/view?usp=sharing"
+            download="curriculo-ronney.pdf"
+            class="btn"
+            >Currículo PDF</a
+          >
+        </div>
+      </section>
+      <div class="divider-1"></div>
+
+      <!-- CURSOS -->
+      <section class="container" id="courses">
+        <div class="courses-title">
+          <h2 data-text="Cursos & Especializações">Cursos & Especializações</h2>
+        </div>
+        <div class="layout swiper courses-swiper">
+          <div class="content swiper-wrapper">
+            <div class="card swiper-slide">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="card-content">
+                <h2>Harvard University</h2>
+                <h3>
+                  CS50's Introduction to Computer Science <span>120h</span>
+                </h3>
+                <h5 class="number-course">01</h5>
+                <p>&#x2611; Week 0 - Scratch</p>
+                <p>&#x2611; Week 1 - C</p>
+                <p>&#x2611; Week 2 - Arrays</p>
+                <p>&#x2611; Week 3 - Algorithms</p>
+                <p>&#x2611; Week 4 - Memory</p>
+                <p>&#x2611; Week 5 - Data Structures</p>
+                <p>&#x2611; Week 6 - Python</p>
+                <p>&#x2611; Week 7 - SQL</p>
+                <p>&#x2611; Week 8 - HTML, CSS, JavaScript</p>
+                <p>&#x2611; Week 9 - Flask</p>
+                <p>&#x2611; Week 10 - Emoji</p>
+                <a
+                  title="visitar página da Universidade de Harvard"
+                  alt="visitar página da Universidade de Harvard"
+                  target="_blank"
+                  href="https://cs50.harvard.edu/x/2022"
+                  >Saiba Mais</a
+                >
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="card-content">
+                <h2>Rocketseat</h2>
+                <h3>Discover-Conectar <span>2h</span></h3>
+                <h5 class="number-course">02</h5>
+                <p>&#x2611; Hardware, software, firmware e drivers</p>
+                <p>
+                  &#x2611; Propriedades e função de memória RAM, HD/SSD e mais
+                </p>
+                <p>&#x2611; Pensamento computacional e lógico</p>
+                <p>&#x2611; Sistemas operacionais e configuração de ambiente</p>
+                <p>&#x2611; E muito mais conteúdo pra explorar</p>
+                <a
+                  title="visitar página da Rocketseat"
+                  alt="visitar página da Rocketseat"
+                  target="_blank"
+                  href="https://www.rocketseat.com.br/discover"
+                  >Saiba Mais</a
+                >
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="card-content">
+                <h2>Rocketseat</h2>
+                <h3>Discover-Fundamentar <span>29h</span></h3>
+                <h5 class="number-course">03</h5>
+                <p>&#x2611; Back-end com JavaScript, Node.JS e SQL</p>
+                <p>&#x2611; Estrutura e gerenciamento de dados</p>
+                <p>&#x2611; Programação orientada a objetos</p>
+                <p>
+                  &#x2611; Front-end com foco em HTML, CSS, JavaScript e DOM
+                </p>
+                <p>&#x2611; Terminal, Git, Github, HTTP a fundo e mais!</p>
+                <a
+                  title="visitar página da Rocketseat"
+                  alt="visitar página da Rocketseat"
+                  target="_blank"
+                  href="https://www.rocketseat.com.br/discover"
+                  >Saiba Mais</a
+                >
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="card-content">
+                <h2>Rocketseat</h2>
+                <h3>Discover-Especializar <span>11h</span></h3>
+                <h5 class="number-course">04</h5>
+                <p>
+                  &#x2611; JavaScript Assíncrono: Callbacks, Promises e
+                  Async/Await
+                </p>
+                <p>&#x2611; Como funcionam e como construir e consumir APIs</p>
+                <p>
+                  &#x2611; Front-end com transition e animation no CSS e os
+                  fundamentos de ReactJS
+                </p>
+                <p>&#x2611; Introdução ao Typescript na programação web</p>
+                <p>
+                  &#x2611; Trabalhar relacionamentos e manipulação de tabelas no
+                  SQL
+                </p>
+                <p>
+                  &#x2611; Ferramentas e técnicas no GitHub para trabalhar em
+                  times
+                </p>
+                <a
+                  title="visitar página da Rocketseat"
+                  alt="visitar página da Rocketseat"
+                  target="_blank"
+                  href="https://www.rocketseat.com.br/discover"
+                  >Saiba Mais</a
+                >
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="card-content">
+                <h2>Digital Innovation One</h2>
+                <h3>TQI Fullstack Developer <span>125h</span></h3>
+                <h5 class="number-course">05</h5>
+                <p>&#x2611; Módulo I - Conteúdo de abertura</p>
+                <p>&#x2611; Módulo II - HTML/CSS3</p>
+                <p>&#x2611; Módulo III - Javascript</p>
+                <p>&#x2611; Módulo IV - ReactJS</p>
+                <p>&#x2611; Módulo V - SQL</p>
+                <p>&#x2611; Módulo VI - JAVA</p>
+                <p>&#x2611; Módulo VII - Spring Framework</p>
+                <p>&#x2611; Módulo VIII - QA</p>
+                <a
+                  title="visitar página da Digital Innovation One"
+                  alt="visitar página da Digital Innovation One"
+                  target="_blank"
+                  href="https://web.dio.me/track/tqi-fullstack-developer"
+                  >Saiba Mais</a
+                >
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="card-content">
+                <h2>Curso em Vídeo</h2>
+                <h4>Professor Gustavo Guanabara</h4>
+                <h3>HTML5 e CSS3: módulo 1 de 5 <span>40h</span></h3>
+                <h5 class="number-course">06</h5>
+                <p>&#x2611; Como a Internet funciona?</p>
+                <p>&#x2611; O que é domínio e hospedagem?</p>
+                <p>&#x2611; Front-end, Back-end e Full stack</p>
+                <p>&#x2611; Símbolos e Emoji no seu site</p>
+                <p>&#x2611; A tag img e favicon</p>
+                <p>&#x2611; Hierarquia de Títulos</p>
+                <p>&#x2611; Semântica na HTML5 é importante</p>
+                <p>&#x2611; Listas OL e UL, links e âncoras</p>
+                <p>&#x2611; Estilos CSS inline, internos e externos</p>
+                <a
+                  title="visitar página do Curso em Vídeo"
+                  alt="visitar página do Curso em Vídeo"
+                  target="_blank"
+                  href="https://www.cursoemvideo.com/curso/html5-css3-modulo1/"
+                  >Saiba Mais</a
+                >
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="card-content">
+                <h2>Curso em Vídeo</h2>
+                <h4>Professor Gustavo Guanabara</h4>
+                <h3>HTML5 e CSS3: módulo 2 de 5 <span>40h</span></h3>
+                <h5 class="number-course">07</h5>
+                <p>&#x2611; Harmonia de cores e paletas</p>
+                <p>&#x2611; Modelo de Caixas, sombras e tipografia</p>
+                <p>&#x2611; As diferenças entre id e class</p>
+                <p>&#x2611; Pseudo-classes e elementos em CSS</p>
+                <p>&#x2611; Planejando a estrutura do seu site</p>
+                <p>&#x2611; Transformando o layout em código</p>
+                <p>&#x2611; Organizando o conteúdo do site</p>
+                <p>&#x2611; Variáveis em CSS</p>
+                <p>&#x2611; Responsividade para sites</p>
+                <a
+                  title="visitar página do Curso em Vídeo"
+                  alt="visitar página do Curso em Vídeo"
+                  target="_blank"
+                  href="https://www.cursoemvideo.com/curso/curso-html5-e-css3-modulo-2-de-5-40-horas/"
+                  >Saiba Mais</a
+                >
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="card-content">
+                <h2>Curso em Vídeo</h2>
+                <h4>Professor Gustavo Guanabara</h4>
+                <h3>HTML5 e CSS3: módulo 3 de 5 <span>40h</span></h3>
+                <h5 class="number-course">08</h5>
+                <p>&#x2611; O que é Git e GitHub?</p>
+                <p>&#x2611; Gerenciando Repositórios GitHub</p>
+                <p>&#x2611; Manutenção em sites hospedados no GitHub Pages</p>
+                <p>&#x2611; Ajustes no HTML do projeto</p>
+                <p>&#x2611; Ajustes no CSS do projeto</p>
+                <p>&#x2611; Imagens com efeito Parallax simples</p>
+                <p>&#x2611; Aprendendo a trabalhar com tabelas</p>
+                <a
+                  title="visitar página do Curso em Vídeo"
+                  alt="visitar página do Curso em Vídeo"
+                  target="_blank"
+                  href="https://www.cursoemvideo.com/curso/curso-html5-e-css3-modulo-3-de-5-40-horas/"
+                  >Saiba Mais</a
+                >
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="card-content">
+                <h2>Curso em Vídeo</h2>
+                <h4>Professor Gustavo Guanabara</h4>
+                <h3>Javascript <span>40h</span></h3>
+                <h5 class="number-course">09</h5>
+                <p>&#x2611; O que o JavaScript é capaz de fazer?</p>
+                <p>&#x2611; Criando o seu primeiro script</p>
+                <p>&#x2611; Variáveis e tipos primitivos</p>
+                <p>&#x2611; Tratamento de dados</p>
+                <p>&#x2611; Operadores</p>
+                <p>&#x2611; Eventos DOM</p>
+                <p>&#x2611; Condições e repetições</p>
+                <p>&#x2611; Variáveis compostas</p>
+                <p>&#x2611; Funções</p>
+                <a
+                  title="visitar página do Curso em Vídeo"
+                  alt="visitar página do Curso em Vídeo"
+                  target="_blank"
+                  href="https://www.cursoemvideo.com/curso/javascript/"
+                  >Saiba Mais</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </section>
+      <div class="divider-2"></div>
+
+      <section class="container" id="certificates">
+        <div class="courses-title">
+          <h2>Certificados</h2>
+        </div>
+
+        <div class="box-cert">
+          <input type="radio" name="slider" id="c1" checked />
+          <input type="radio" name="slider" id="c2" />
+          <input type="radio" name="slider" id="c3" />
+          <input type="radio" name="slider" id="c4" />
+          <input type="radio" name="slider" id="c5" />
+
+          <label for="c1" id="cert-1">
+            <iframe src="https://docs.google.com/viewer?srcid=1HJvKhdZMonC878I57bq8sqPzm5fo1bpQ&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
+            frameborder="0"
+            ></iframe>
+            <a href="#">Verificar Certificado</a>
+          </label>
+          <label for="c2" id="cert-2">
+            <p>
+              <span>Código do certificado:  </span>b8ea2ad8-9673-4838-80bb-0309a25fd534
+            </p>
+            <iframe
+            src="https://docs.google.com/viewer?srcid=1ZdYUTSUGQOm1jzbWOSrh5ua3cHsfPj6v&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
+            frameborder="0"
+          ></iframe>
+            <a href="https://app.rocketseat.com.br/discover/certificates"
+              >Verificar Certificado</a
+            >
+          </label>
+          <label for="c3" id="cert-3">
+            <p>
+              <span>Código do certificado:  </span>2c0b5f2a-7c99-41dc-b5e7-99c7357bda7f
+            </p>
+            <iframe
+            src="https://docs.google.com/viewer?srcid=13PSfLzznfXPP1pzwAVdeCLS2Baa0Smr7&pid=explorer&efh=false&a=v&chrome=false&embedded=true""
+            frameborder="0"
+          ></iframe>
+            <a href="https://app.rocketseat.com.br/discover/certificates"
+              >Verificar Certificado</a
+            >
+          </label>
+          <label for="c4" id="cert-4">
+            <p>
+              <span>Código do certificado:  </span>7378ee30-b05d-4599-a658-f3ea7e5eee3f
+            </p>
+            <iframe
+            src="https://docs.google.com/viewer?srcid=1c-cmIyUMQejwHHqGKCPL6jc5wdFZQG-0&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
+            frameborder="0"
+          ></iframe>
+            <a href="https://app.rocketseat.com.br/discover/certificates"
+              >Verificar Certificado</a
+            >
+          </label>
+          <label for="c5" id="cert-5">
+            <iframe
+            src="https://docs.google.com/viewer?srcid=1HJvKhdZMonC878I57bq8sqPzm5fo1bpQ&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
+            frameborder="0"
+          ></iframe>
+            <a href="https://www.dio.me/certificate/F73A91A4/share"
+              >Verificar Certificado</a
+            >
+          </label>
+        </div>
+      </section>
+      <div class="divider-1"></div>
+      <section class="container" id="contact">
+        <div class="layout-contact">
+          
+          <div class="box-form">
+            <div class="form-content">
+              <h2>CONTATO</h2>
+            <form action="https://formsubmit.co/051435cb9b0432f367d9ec0fccc10578" method="POST">
+              <!-- <input type="hidden" name="_captcha" value="false"> -->
+              <input type="hidden" name="_next" value="http://127.0.0.1:5500/email.html">
+              <!-- <input type="hidden" name="_autoresponse" value="your custom message"> -->
+              <input type="hidden" name="_template" value="table">
+              <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+              <input type="email" name="email" placeholder="Digite seu e-mail" autocomplete="off" required>
+              <input type="number" name="number" placeholder="Digite seu telefone(opcional)" autocomplete="off">
+              <textarea name="message" placeholder="Digite sua mensagem..." required></textarea>
+              <button type="submit">Enviar</button>
+         </form>
+        </div>
+          </div>
+          <div class="box-media">
+            <div class="box-img">
+                  <img src="images/dev2.jpg" alt="imagem de computador">
+                </div>
+            <ul class="box-icons">
+              <li data-text="linkedin" data-color="#0e76a8">
+                <a class="linkedin" href="https://www.linkedin.com/in/ronneyleal"><i class="ic fa-brands fa-linkedin"></i></a>
+              </li>
+              <li data-text="github" data-color="#171515">
+                <a class="github" href="https://github.com/ronneyleal"><i class="ic fa-brands fa-github"></i></a>
+              </li>
+              <li data-text="instagram" data-color="#e4405f">
+                <a class="instagram" href="https://www.instagram.com/ronney.leal/"><i class="ic fa-brands fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+          </div>
+      </section>
+      <div class="divider-2"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="container-footer">
+      <div class="box-footer">
+        <a href="#home">
+        <img src="images/ronneydev.png" alt="logo ronney dev"></a>
+        <p>Designed by &copy; Ronneydev</p>
       </div>
+      <ul class="footer-icons">
+        <li>
+          <a href="https://www.linkedin.com/in/ronneyleal"><i class="fa-brands fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/ronneyleal"><i class="fa-brands fa-github"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/ronney.leal/"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+      </ul>
+
+      <ul class="footer-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#courses">Cursos</a></li>
+        <li><a href="#certificates">Certificados</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
     </div>
-    <div class="aside-r">
-      <img data-speed="-4" class="layer" id="circle" src="images/ronny.png" alt="foto ronney">
-      <img data-speed="2" class="layer" id="photo" src="images/ronny4.png" alt="foto ronney">
-      <img data-speed="2" class="layer" id="photo-sh" src="images/ronny5.png" alt="foto ronney">
-    </div>
-  </section>
-  <div class="divider-2"></div>
-
-
-  <!-- ABOUT -->
-  <section class="container" id="about">
-    <div class="about-img">
-      <img id="fotofor" src="images/fotofor3.png" alt="foto ronney">
-      <img id="fotofor-sh" src="images/fotofor4.png" alt="foto ronney">
-
-    </div>
-    <div class="about-text">
-      <h2>SOBRE MIM</h2>
-      <h3>Desenvolvedor <span>Front-end</span></h3>
-      <p>Me chamo Ronney Leal, tenho 30 anos e sou casado há 7 anos, aos 15 anos pela primeira vez tive contato com um computador e a partir desse dia eu me tornei um entusiasta por tecnologia, logo me interessei em aprender novas funcionalidades, edições simples de vídeo e áudio, a fazer download e hospedagem de jogos, o que me levou a criar um blog de games, onde eu compartilhava jogos com a comunidade, e nessa mesma época aprendi a fazer manutenção e reparos no computador, aos 18 anos ingressei formalmente no mercado de trabalho como designer, já utilizando ferramentas como photoshop e corel draw, atuando por 4 anos. Aos, 19 anos fui aprovado no curso Ciência da Computação na UFPI, com indisponibilidade de cursar devido a carga horária, foi então que em 2013 ingressei na faculdade para cursar Ciências Contábeis e  logo no ano seguinte, 2014 fui contratado em uma nova empresa como auxiliar de departamento financeiro, onde logo me destaquei, passando a ser encarregado do setor e permanecendo ali por 7 anos. Em 2017 concluí o curso de ciências contábeis, bem como a aprovação no CFC. E agora em 2022 decidi seguir a área que sempre me atraiu, a tecnologia, passei a estudar desenvolvimento fullstack,  tendo adentrado mais no front-end, onde espero me tornar um excelente dev e assim contribuir com aplicações úteis que possam de alguma forma facilitar a vida das pessoas.</p>
-
-      <a target="_blank" href="#" download="curriculo-ronney.pdf" class="btn">Currículo PDF</a>
-    </div>
-  </section>
-  <div class="divider-1"></div>
-
-    <!-- CURSOS -->
-  <section class="container" id="cursos">
-    <div class="cursos-title">
-      <h2>Cursos <span>&</span> Especializações</h2>
-    </div>
-    <div class="layout swiper mySwiper">
-      <div class="content swiper-wrapper">
-
-        <div class="card swiper-slide">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <div class="card-content">
-            <h2>Rocketseat</h2>
-            <h3>Discover-Fundamentar <span>29h</span></h3>
-            <p>&#x2611; Back-end com JavaScript, Node.JS e SQL</p>
-            <p>&#x2611; Estrutura e gerenciamento de dados</p>
-            <p>&#x2611; Programação orientada a objetos</p>
-            <p>&#x2611; Front-end com foco em HTML, CSS, JavaScript e DOM</p>
-            <p>&#x2611; Terminal, Git, Github, HTTP a fundo e mais!</p>
-            <a title="visitar página da Rocketseat" alt="visitar página da Rocketseat" target="_blank" href="https://www.rocketseat.com.br/discover">Saiba Mais</a>
-          </div>
-        </div>
-
-        <div class="card swiper-slide">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <div class="card-content">
-            <h2>Rocketseat</h2>
-            <h3>Discover-Especializar <span>11h</span></h3>
-            <p>&#x2611; JavaScript Assíncrono: Callbacks, Promises e Async/Await</p>
-            <p>&#x2611; Como funcionam e como construir e consumir APIs</p>
-            <p>&#x2611; Front-end com transition e animation no CSS e os fundamentos de ReactJS</p>
-            <p>&#x2611; Introdução ao Typescript na programação web</p>
-            <p>&#x2611; Trabalhar relacionamentos e manipulação de tabelas no SQL</p>
-            <p>&#x2611; Ferramentas e técnicas no GitHub para trabalhar em times</p>
-            <a title="visitar página da Rocketseat" alt="visitar página da Rocketseat" target="_blank" href="https://www.rocketseat.com.br/discover">Saiba Mais</a>
-          </div>
-        </div>
-
-        <div class="card swiper-slide">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <div class="card-content">
-            <h2>Rocketseat</h2>
-            <h3>Discover-Fundamentar <span>29h</span></h3>
-            <p>&#x2611; Back-end com JavaScript, Node.JS e SQL</p>
-            <p>&#x2611; Estrutura e gerenciamento de dados</p>
-            <p>&#x2611; Programação orientada a objetos</p>
-            <p>&#x2611; Front-end com foco em HTML, CSS, JavaScript e DOM</p>
-            <p>&#x2611; Terminal, Git, Github, HTTP a fundo e mais!</p>
-            <a title="visitar página da Rocketseat" alt="visitar página da Rocketseat" target="_blank" href="https://www.rocketseat.com.br/discover">Saiba Mais</a>
-          </div>
-        </div>
-
-                <div class="card swiper-slide">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <div class="card-content">
-            <h2>Rocketseat</h2>
-            <h3>Discover-Conectar <span>2h</span></h3>
-            <p>&#x2611; Hardware, software, firmware e drivers</p>
-            <p>&#x2611; Propriedades e função de memória RAM, HD/SSD e mais</p>
-            <p>&#x2611; Pensamento computacional e lógico</p>
-            <p>&#x2611; Sistemas operacionais e configuração de ambiente</  p>
-            <p>&#x2611; E muito mais conteúdo pra explorar</p>
-            <a title="visitar página da Rocketseat" alt="visitar página da Rocketseat" target="_blank" href="https://www.rocketseat.com.br/discover">Saiba Mais</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-  </section>
-  <div class="divider-1"></div>
-  </main>
-  <script src="js/script.js"></script>
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script src="js/swiper.js"></script>
-</body>
+    </footer>
+    <a href="#home" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+    <!-------------scrollreveal------------>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- meu script -->
+    <script src="js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/swiper.js"></script>
+    <!-- vanilla -->
+    <script src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll('.box-icons li a'), {
+        max: 30,
+        speed: 400,
+        glare: true,
+        'max-glare': 1
+      })
+    </script>
+  </body>
 </html>
