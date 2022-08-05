@@ -1,12 +1,15 @@
-var swiper = new Swiper('.courses-swiper', {
+var swiper = new Swiper('.swiper', {
   slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: 40,
   slidesPerGroup: 1,
   initialSlide: 1,
   loop: true,
   centeredSlides: true,
   centeredSlidesBounds: true,
   // 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'creative' | 'cards'
+  scrollbar: {
+    el: '.swiper-scrollbar'
+  },
   effect: 'slide',
   grabCursor: true,
   pagination: {

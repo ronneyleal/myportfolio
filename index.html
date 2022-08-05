@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale=1.0, user-scalable='0' name='viewport'/>
     <title>Ronneydev</title>
     <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
     <!-- Link Swiper's CSS -->
@@ -18,32 +18,36 @@
       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
-    <!-- css local -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link
+      />
+      <!-- css local -->
+      <link rel="stylesheet" href="css/style.css" />
+      <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+      />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Dancing+Script:wght@400;700&family=Noto+Sans:wght@400;700&family=Poppins:wght@400;700&family=Signika:wght@400;700&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Dancing+Script:wght@400;700&family=Noto+Sans:wght@400;700&family=Poppins:wght@400;700&family=Signika:wght@400;700&display=swap"
+    rel="stylesheet"
     />
   </head>
   <body>
     <header id="header">
       <nav class="nav">
-        <a class="logo" href="#home">My <span>Portfolio</span></a>
+        <a class="logo" alt="logo" href="#home">
+          <h2>My <span>Portfolio</span></h2>
+          <img class="imglogo" src="images/ronneydev.png" alt="logo">
+        </a>
+
         <div class="menu">
           <ul class="grid-nav">
             <li><a class="title" href="#home">Início</a></li>
             <li><a class="title" href="#about">Sobre</a></li>
             <li><a class="title" href="#courses">Cursos</a></li>
             <li><a class="title" href="#certificates">Certificados</a></li>
-            <li><a class="title2" href="#contact">Contato</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
           </ul>
         </div>
 
@@ -51,40 +55,47 @@
         <div class="toggle icon-close"><i class="fa-solid fa-x"></i></div>
       </nav>
     </header>
-    <!-- <div class="divider-1"></div> -->
 
     <main>
       <section class="container" id="home">
         <div class="aside">
-          <img onmouseenter="changelogo()" id="ronney" src="images/ronneydev.png" alt="logo ronneydev" />
-          <img id="ronney-rf" src="images/ronneydev3.png" />
-          <h1 class="frontend">FRONT-END DEVELOPER</h1>
-          <div class="packicons">
-            <a href="https://www.linkedin.com/in/ronneyleal"
-              ><img
-                class="icons"
-                src="icons/linkedin.svg"
-                alt="perfil do linkedin"
-            /></a>
-            <a href="https://github.com/ronneyleal"
-              ><img class="icons" src="icons/github.svg" alt="perfil do github"
-            /></a>
-            <a href="https://www.instagram.com/ronney.leal/"
-              ><img
-                class="icons"
-                src="icons/instagram.svg"
-                alt="perfil do instagram"
-            /></a>
+          <div class="text-logo">
+            <span class="tx arrowleft"><</span>
+            <span class="tx rondev">RONNEYDE\</span>
+            <span class="tx arrowright">/></span>
+            
           </div>
+          <h1 class="frontend">FRONT-END DEVELOPER</h1>
+          <ul class="packicons">
+            <li>
+              <a href="https://www.linkedin.com/in/ronneyleal"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/ronneyleal"><i class="fa-brands fa-github"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/ronney.leal/"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
         </div>
         <div class="aside-r">
-          <img id="circle" src="images/ronny.png" alt="imagem de um cirulo com efeitos" />
-          <div class="media-icons">
-            <i title="html 5" alt="html 5" class="fa-brands fa-html5"></i>
-            <i title="css 3" alt="css 3" class="fa-brands fa-css3-alt"></i>
-            <i title="javascript" alt="javascript" class="fa-brands fa-js"></i>
-            <i title="reactjs" alt="reactjs" class="fa-brands fa-react"></i>
+          <div class="circle">
+          <img src="images/ronny.png" alt="imagem de um cirulo com efeitos" />
           </div>
+          <ul class="media-icons">
+            <li data-text="HTML 5" data-image="images/ronnyhtml.png">
+              <a class="html" href="#"><i title="html 5" alt="html 5" class="ico fa-brands fa-html5"></i></a>
+            </li>
+            <li data-text="CSS 5" data-image="images/ronnycss.png">
+              <a class="css" href="#"><i title="css 3" alt="css 3" class="ico fa-brands fa-css3-alt"></i></a>
+            </li>
+            <li data-text="Javascript" data-image="images/ronnyjss.png">
+              <a class="js" href="#"><i title="javascript" alt="javascript" class="ico fa-brands fa-js"></i></a>
+            </li>
+            <li class="lireact" data-text="ReactJS" data-image="images/ronnyreact.png">
+              <a class="react" href="#"><i title="reactjs" alt="reactjs" class="ico fa-brands fa-react"></i></a>
+            </li>
+          </ul>
         </div>
       </section>
       <div class="divider-2"></div>
@@ -150,11 +161,11 @@
 
       <!-- CURSOS -->
       <section class="container" id="courses">
-        <div class="courses-title">
-          <h2 data-text="Cursos & Especializações">Cursos & Especializações</h2>
+        <div class="text-title">
+          <h2 class="courses-title" data-text="Cursos & Especializações">Cursos & Especializações</h2>
         </div>
-        <div class="layout swiper courses-swiper">
-          <div class="content swiper-wrapper">
+        <div class="swiper">
+          <div class="swiper-wrapper">
             <div class="card swiper-slide">
               <span></span>
               <span></span>
@@ -425,67 +436,75 @@
       <div class="divider-2"></div>
 
       <section class="container" id="certificates">
-        <div class="courses-title">
-          <h2>Certificados</h2>
+        <div class="text-title">
+          <h2 class="courses-title">Certificados</h2>
         </div>
 
         <div class="box-cert">
-          <input type="radio" name="slider" id="c1" checked />
-          <input type="radio" name="slider" id="c2" />
-          <input type="radio" name="slider" id="c3" />
-          <input type="radio" name="slider" id="c4" />
-          <input type="radio" name="slider" id="c5" />
+          <input class="radioslide" type="radio" name="slider" id="c1" checked />
+          <input class="radioslide" type="radio" name="slider" id="c2" />
+          <input class="radioslide" type="radio" name="slider" id="c3" />
+          <input class="radioslide" type="radio" name="slider" id="c4" />
+          <input class="radioslide" type="radio" name="slider" id="c5" />
 
           <label for="c1" id="cert-1">
             <iframe src="https://docs.google.com/viewer?srcid=1HJvKhdZMonC878I57bq8sqPzm5fo1bpQ&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
             frameborder="0"
             ></iframe>
-            <a href="#">Verificar Certificado</a>
+            <div class="linkcert">
+              <p>
+                <span>Código: </span>###############
+              </p>
+                <a href="#">Verificar Certificado</a>
+              </div>
           </label>
           <label for="c2" id="cert-2">
-            <p>
-              <span>Código do certificado:  </span>b8ea2ad8-9673-4838-80bb-0309a25fd534
-            </p>
             <iframe
             src="https://docs.google.com/viewer?srcid=1ZdYUTSUGQOm1jzbWOSrh5ua3cHsfPj6v&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
             frameborder="0"
           ></iframe>
-            <a href="https://app.rocketseat.com.br/discover/certificates"
-              >Verificar Certificado</a
-            >
+          <div class="linkcert">
+          <p>
+            <span>Código: </span>b8ea2ad8-9673-4838-80bb-0309a25fd534
+          </p>
+            <a href="https://app.rocketseat.com.br/discover/certificates">Verificar Certificado</a>
+          </div>
           </label>
           <label for="c3" id="cert-3">
-            <p>
-              <span>Código do certificado:  </span>2c0b5f2a-7c99-41dc-b5e7-99c7357bda7f
-            </p>
             <iframe
             src="https://docs.google.com/viewer?srcid=13PSfLzznfXPP1pzwAVdeCLS2Baa0Smr7&pid=explorer&efh=false&a=v&chrome=false&embedded=true""
             frameborder="0"
           ></iframe>
-            <a href="https://app.rocketseat.com.br/discover/certificates"
-              >Verificar Certificado</a
-            >
+          <div class="linkcert">
+            <p>
+              <span>Código: </span>2c0b5f2a-7c99-41dc-b5e7-99c7357bda7f
+            </p>
+              <a href="https://app.rocketseat.com.br/discover/certificates">Verificar Certificado</a>
+            </div>
           </label>
           <label for="c4" id="cert-4">
-            <p>
-              <span>Código do certificado:  </span>7378ee30-b05d-4599-a658-f3ea7e5eee3f
-            </p>
             <iframe
             src="https://docs.google.com/viewer?srcid=1c-cmIyUMQejwHHqGKCPL6jc5wdFZQG-0&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
             frameborder="0"
           ></iframe>
-            <a href="https://app.rocketseat.com.br/discover/certificates"
-              >Verificar Certificado</a
-            >
+          <div class="linkcert">
+            <p>
+              <span>Código: </span>7378ee30-b05d-4599-a658-f3ea7e5eee3f
+            </p>
+              <a href="https://app.rocketseat.com.br/discover/certificates">Verificar Certificado</a>
+            </div>
           </label>
           <label for="c5" id="cert-5">
             <iframe
             src="https://docs.google.com/viewer?srcid=1HJvKhdZMonC878I57bq8sqPzm5fo1bpQ&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
             frameborder="0"
           ></iframe>
-            <a href="https://www.dio.me/certificate/F73A91A4/share"
-              >Verificar Certificado</a
-            >
+          <div class="linkcert">
+            <p>
+              <span>Código: </span>F73A91A4
+            </p>
+              <a href="https://www.dio.me/certificate/F73A91A4/share">Verificar Certificado</a>
+            </div>
           </label>
         </div>
       </section>
@@ -497,34 +516,30 @@
             <div class="form-content">
               <h2>CONTATO</h2>
             <form action="https://formsubmit.co/051435cb9b0432f367d9ec0fccc10578" method="POST">
-              <!-- <input type="hidden" name="_captcha" value="false"> -->
+              <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_next" value="http://127.0.0.1:5500/email.html">
-              <!-- <input type="hidden" name="_autoresponse" value="your custom message"> -->
+              <input type="hidden" name="_autoresponse" value="your custom message">
               <input type="hidden" name="_template" value="table">
               <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
               <input type="email" name="email" placeholder="Digite seu e-mail" autocomplete="off" required>
-              <input type="number" name="number" placeholder="Digite seu telefone(opcional)" autocomplete="off">
+              <input type="number" name="number" placeholder="Digite seu telefone (opcional)" autocomplete="off">
               <textarea name="message" placeholder="Digite sua mensagem..." required></textarea>
               <button type="submit">Enviar</button>
          </form>
         </div>
           </div>
-          <div class="box-media">
-            <div class="box-img">
-                  <img src="images/dev2.jpg" alt="imagem de computador">
-                </div>
+            <div class="box-img"><img src="images/dev2.jpg" alt="imagem de computador"></div>
             <ul class="box-icons">
-              <li data-text="linkedin" data-color="#0e76a8">
+              <li data-text="Linkedin" data-color="#0e76a8">
                 <a class="linkedin" href="https://www.linkedin.com/in/ronneyleal"><i class="ic fa-brands fa-linkedin"></i></a>
               </li>
-              <li data-text="github" data-color="#171515">
+              <li data-text="Github" data-color="#171515">
                 <a class="github" href="https://github.com/ronneyleal"><i class="ic fa-brands fa-github"></i></a>
               </li>
-              <li data-text="instagram" data-color="#e4405f">
+              <li data-text="Instagram" data-color="#e4405f">
                 <a class="instagram" href="https://www.instagram.com/ronney.leal/"><i class="ic fa-brands fa-instagram"></i></a>
               </li>
             </ul>
-          </div>
           </div>
       </section>
       <div class="divider-2"></div>
@@ -560,9 +575,7 @@
     </footer>
     <a href="#home" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
     <!-------------scrollreveal------------>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- meu script -->
-    <script src="js/script.js"></script>
+    <script src="js/scrollreveal.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
@@ -570,12 +583,14 @@
     <!-- vanilla -->
     <script src="js/vanilla-tilt.min.js"></script>
     <script type="text/javascript">
-      VanillaTilt.init(document.querySelectorAll('.box-icons li a'), {
-        max: 30,
-        speed: 400,
+      VanillaTilt.init(document.querySelectorAll('.box-icons li a, .media-icons li a'), {
+        max: 40,
+        speed: 300,
         glare: true,
         'max-glare': 1
       })
     </script>
+ <!-- meu script -->
+<script src="js/script.js"></script>
   </body>
 </html>

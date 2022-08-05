@@ -1,18 +1,25 @@
-// ALTERAR LOGO QUANDO DER HOVER
+// PAUSAR ANIMAÇÃO DO REACT QUANDO PASSAR MOUSE
+let reactjs = document.querySelector('.media-icons li a .fa-react')
+let lireact = document.querySelector('.lireact')
 
-function changelogo() {
-  let ronneydev = document.getElementById('ronney')
+lireact.addEventListener('mouseenter', function (e) {
+  reactjs.style.animation = 'none'
+})
+lireact.addEventListener('mouseleave', function (e) {
+  reactjs.style.animation = 'react 6s linear infinite'
+})
 
-  if (
-    ronneydev.addEventListener('mouseover', function (e) {
-      ronneydev.src = 'images/ronneydev2.png'
-    })
-  );
-  else
-    ronneydev.addEventListener('mouseout', function (e) {
-      ronneydev.src = 'images/ronneydev.png'
-    })
-}
+let medlist = document.querySelectorAll('.media-icons li')
+let circle = document.querySelector('.circle img')
+medlist.forEach(elements => {
+  elements.addEventListener('mouseenter', function (e) {
+    let image = e.target.getAttribute('data-image')
+    circle.src = image
+  })
+  elements.addEventListener('mouseleave', function (e) {
+    circle.src = 'images/ronny.png'
+  })
+})
 
 /* ScrollReveal: Mostrar elementos quando der scroll na página */
 const scrollReveal = ScrollReveal({
@@ -23,14 +30,16 @@ const scrollReveal = ScrollReveal({
 })
 
 scrollReveal.reveal(
-  `#home .aside, #home .aside-r,
-  #about .about-img, #about .about-text,
-  #courses .courses-title, #courses .content,
-  #certificates .cert-title, #certificates .box-cert,
-  #contact .box-form, #contact .box-media,
+  `#home .text-logo, #home .frontend, #home .packicons,
+  #home .circle, #home .media-icons li,
+  #about .about-img, #about .img-content, #about .about-text h2,
+  #about .about-text h3, #about .about-text p, #about .about-text a,
+  #courses .text-title, #courses .swiper,
+  #certificates .text-title, #certificates .box-cert,
+  #contact .box-form,  #contact .form-content, #contact .box-img, #contact .box-icons,
   footer .box-footer, footer .footer-icons, footer .footer-links
   `,
-  { interval: 100 }
+  { interval: 40 }
 )
 
 /* Botão voltar para o topo */
@@ -91,14 +100,29 @@ for (const link of links) {
 /* mudar o header da página quando der scroll */
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
+let logoh2 = document.querySelector('.logo h2')
+let logoh2span = document.querySelector('.logo h2 span')
+let imglogo = document.querySelector('.imglogo')
 
 function changeHeaderWhenScroll() {
   if (window.scrollY >= navHeight) {
     // scroll é maior que a altura do header
     header.classList.add('scroll')
+    logoh2.style.opacity = '0'
+    logoh2.style.visibility = 'hidden'
+    logoh2span.style.opacity = '0'
+    logoh2span.style.visibility = 'hidden'
+    imglogo.style.opacity = '1'
+    imglogo.style.visibility = 'visible'
   } else {
     // menor que a altura do header
     header.classList.remove('scroll')
+    logoh2.style.opacity = '1'
+    logoh2.style.visibility = 'visible'
+    logoh2span.style.opacity = '1'
+    logoh2span.style.visibility = 'visible'
+    imglogo.style.opacity = '0'
+    imglogo.style.visibility = 'hidden'
   }
 }
 
@@ -119,7 +143,6 @@ list.forEach(elements => {
     bg.style.background = color
   })
   elements.addEventListener('mouseleave', function (e) {
-    bg.style.background =
-      'linear-gradient(-220deg, var(--second-color), var(--light-color))'
+    bg.style.background = 'var(--middle-color)'
   })
 })
