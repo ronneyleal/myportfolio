@@ -32,12 +32,10 @@ const scrollReveal = ScrollReveal({
 scrollReveal.reveal(
   `#home .text-logo, #home .frontend, #home .packicons,
   #home .circle, #home .media-icons li,
-  #about .about-img, #about .img-content, #about .about-text h2,
-  #about .about-text h3, #about .about-text p, #about .about-text a,
+  #about .about-img, #about .about-text,
   #courses .text-title, #courses .swiper,
   #certificates .text-title, #certificates .box-cert,
-  #contact .box-form,  #contact .form-content, #contact .box-img, #contact .box-icons,
-  footer .box-footer, footer .footer-icons, footer .footer-links
+  #contact .box-form,  #contact .form-content, #contact .box-img, #contact .box-icons
   `,
   { interval: 40 }
 )
@@ -131,18 +129,4 @@ window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()
   backToTop()
   activateMenuAtCurrentSection()
-})
-
-// alterar cor de fundo conforme icones
-
-let list = document.querySelectorAll('.box-icons li')
-let bg = document.querySelector('body')
-list.forEach(elements => {
-  elements.addEventListener('mouseenter', function (e) {
-    let color = e.target.getAttribute('data-color')
-    bg.style.background = color
-  })
-  elements.addEventListener('mouseleave', function (e) {
-    bg.style.background = 'var(--middle-color)'
-  })
 })

@@ -1,10 +1,10 @@
 var swiper = new Swiper('.swiper', {
   slidesPerView: 3,
-  spaceBetween: 40,
+  spaceBetween: 30,
   slidesPerGroup: 1,
-  initialSlide: 1,
+  initialSlide: 0,
   loop: true,
-  centeredSlides: true,
+  centeredSlides: false,
   centeredSlidesBounds: true,
   // 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'creative' | 'cards'
   scrollbar: {
@@ -22,33 +22,19 @@ var swiper = new Swiper('.swiper', {
   },
 
   breakpoints: {
-    350: {
+    320: {
       slidesPerView: 1,
-      spaceBetween: 10
-    },
-
-    420: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    580: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-
-    650: {
-      slidesPerView: 2,
       spaceBetween: 30
     },
 
     768: {
-      slidesPerView: 3,
-      spaceBetween: 30
+      slidesPerView: 2,
+      spaceBetween: 40
     },
 
     1024: {
       slidesPerView: 3,
-      spaceBetween: 40
+      spaceBetween: 30
     }
   }
 })
