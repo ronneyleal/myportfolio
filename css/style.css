@@ -139,7 +139,7 @@ nav.show .menu {
 }
 
 nav.show .menu ul li a {
-  font-size: var(--sub-title);
+  font-size: var(--front-title);
 }
 
 nav.show .menu ul {
@@ -147,7 +147,7 @@ nav.show .menu ul {
 }
 
 nav.show ul.grid-nav {
-  gap: 40px;
+  gap: 30px;
 }
 
 
