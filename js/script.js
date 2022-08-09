@@ -35,9 +35,9 @@ scrollReveal.reveal(
   #about .about-img, #about .about-text,
   #courses .text-title, #courses .swiper,
   #certificates .text-title, #certificates .box-cert,
-  #contact .box-form,  #contact .form-content, #contact .box-img, #contact .box-icons
+  #contact .box-form,  #contact .form-content, #contact .box-img
   `,
-  { interval: 40 }
+  { interval: 30 }
 )
 
 /* Botão voltar para o topo */
