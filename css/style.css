@@ -1851,9 +1851,9 @@ input[type="radio"]::after {
 @media (max-width: 1440px) {
   :root {
     /* font sizes */
-    --title: 45px;
+    --title: 50px;
     --front-title: 25px;
-    --sub-title: 26px;
+    --sub-title: 25px;
     --t-title: 18px;
     --about: 14px;
     --text: 14px;
@@ -2080,8 +2080,8 @@ input[type="radio"]::after {
 
   :root {
     /* font sizes */
-    --title: 40px;
-    --sub-title: 23px;
+    --title: 50px;
+    --sub-title: 22px;
     --front-title: 24px;
     --t-title: 15px;
     --about: 13px;
@@ -2176,8 +2176,8 @@ input[type="radio"]::after {
 
   :root {
     /* font sizes */
-    --title: 34px;
-    --front-title: 24px;
+    --title: 50px;
+    --front-title: 22px;
     --sub-title: 22px;
     --t-title: 14px;
     --about: 12px;
