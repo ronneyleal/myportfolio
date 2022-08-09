@@ -2295,6 +2295,10 @@ input[type="radio"]::after {
     padding: 50px 20px;
   }
 
+  .text-title .courses-title {
+    line-height: 1;
+  }
+
 
   .footer .container-footer {
     gap: 15px;
@@ -2360,9 +2364,9 @@ input[type="radio"]::after {
     --sub-title: 24px;
     --front-title: 24px;
     --t-title: 18px;
-    --about: 14px;
+    --about: 12px;
     --text: 14px;
-    --text-buttons: 14px;
+    --text-buttons: 12px;
     --footer: 15px;
   }
 
@@ -2464,20 +2468,21 @@ input[type="radio"]::after {
   }
 
   .img-content:nth-child(2) {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
   .about-text {
-    width: 100%;
+    width: 92%;
     height: auto;
     margin: 10px;
-    margin-top: 30px;
+    margin-top: 10px;
     flex-direction: column;
     align-items: flex-start;
+    flex-wrap: nowrap;
   }
 
   .about-text p {
-    line-height: 1.8;
+    line-height: 1.7;
     padding-top: 5px;
   }
 
@@ -2702,7 +2707,7 @@ input[type="radio"]::after {
 
   .text-title .courses-title {
     padding: 20px;
-    line-height: 1.5;
+    line-height: 1.2;
   }
 
   .card {
