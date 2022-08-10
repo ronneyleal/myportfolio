@@ -7,11 +7,11 @@ window.onload = function () {
     title: 'Email enviado com sucesso',
     // html: '<a href="http://127.0.0.1:5500"><h2>Retornar a página principal</h2></a>',
     timer: 4000,
-    color: '#01444e',
-    confirmButtonColor: '#01444e',
-    cancelButtonColor: '#01444e',
-    iconColor: '#01444e',
-    linkColor: '#01444e',
+    color: '#092035',
+    confirmButtonColor: '#092035',
+    cancelButtonColor: '#092035',
+    iconColor: '#092035',
+    linkColor: '#092035',
     didOpen: () => {
       Swal.showLoading()
       const b = Swal.getHtmlContainer().querySelector('b')

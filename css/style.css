@@ -22,16 +22,27 @@ ul {
 
 /* VARIABLES */
 :root {
-  --header-height: 4rem;
-  /*color mode */
-  --primary-color: #0F0E0E;
+
+  /* green */
+  /* --primary-color: #0F0E0E;
   --second-strong: #00191d;
   --second-color: #002c33;
   --middle-color: #01444e;
   --light-color: #478f9a;
   --lightning-color: #F4F2F4;
-  --neon-color: #00fcff;
-  --gray-color: #d3d3d3;
+  --neon: #00fcff;
+  --gray-color: #d3d3d3; */
+
+
+  --header-height: 4rem;
+  /*color dark mode */
+  --bgcolor: #01444e;
+  --primary: #002c33;
+  --second: #478f9a;
+  --light: #D8EBF2;
+  --neon: #00fcff;
+  --dark: #050505;
+
 
   /* fonts */
   --dance-font: 'Dancing Script', cursive;
@@ -52,9 +63,13 @@ ul {
   --footer: 16px;
 }
 
+/* .dark-mode:root {
+ 
+} */
+
 body {
   height: 100vh;
-  background: var(--middle-color);
+  background: var(--bgcolor);
   /* overflow-x: hidden; */
   background-repeat: no-repeat;
 }
@@ -74,7 +89,7 @@ main {
 
 #header.scroll {
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
-  background-color: var(--middle-color);
+  background-color: var(--bgcolor);
 }
 
 .divider-1 {
@@ -82,7 +97,7 @@ main {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, var(--light-color), var(--second-color));
+  background: linear-gradient(270deg, var(--bgcolor), var(--primary));
 }
 
 .divider-2 {
@@ -90,7 +105,7 @@ main {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, var(--second-color), var(--light-color));
+  background: linear-gradient(270deg, var(--primary), var(--bgcolor));
 }
 
 .nav {
@@ -128,7 +143,7 @@ nav .menu ul {
 nav.show .menu {
   opacity: 1;
   visibility: visible;
-  background: var(--middle-color);
+  background: var(--primary);
   height: 100%;
   width: 100%;
   position: fixed;
@@ -153,7 +168,7 @@ nav.show ul.grid-nav {
 
 /*--------toggle menu-----------*/
 .toggle i {
-  color: var(--lightning-color);
+  color: var(--light);
   font-size: 30px;
   cursor: pointer;
 }
@@ -183,14 +198,14 @@ nav .icon-menu {
 .logo h2 {
   font-family: var(--signika-font);
   font-weight: 400;
-  color: var(--lightning-color);
+  color: var(--light);
   font-size: var(--t-title);
 }
 
 .logo h2 span {
   font-family: var(--signika-font);
   font-weight: 700;
-  color: var(--light-color);
+  color: var(--second);
   font-size: var(--sub-title);
 }
 
@@ -212,7 +227,7 @@ nav .icon-menu {
 .title {
   font-family: var(--signika-font);
   justify-content: space-evenly;
-  color: var(--lightning-color);
+  color: var(--light);
   font-size: var(--text);
   -webkit-font-smoothing: auto;
   transition: 0.3s ease;
@@ -225,16 +240,16 @@ nav .icon-menu {
 
 .title:hover,
 .title.active:hover {
-  color: var(--middle-color);
-  background-color: var(--neon-color);
-  box-shadow: 0 0 7px var(--neon-color), 0 0 16px var(--neon-color);
+  color: var(--primary);
+  background-color: var(--light);
+  box-shadow: 0 0 5px var(--neon), 0 0 5px var(--neon);
 }
 
 .title.active,
 .title2.active {
   border-radius: 5px;
-  border-bottom: 2px solid var(--neon-color);
-  filter: drop-shadow(0 0 2px var(--neon-color));
+  border-bottom: 2px solid var(--neon);
+  filter: drop-shadow(0 0 2px var(--neon));
 }
 
 .container {
@@ -267,20 +282,20 @@ nav .icon-menu {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
   z-index: 2;
 }
 
 .aside .packicons li a i {
   font-size: 35px;
-  color: var(--lightning-color);
+  color: var(--light);
   transition: 0.3s ease;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .aside .packicons li a:hover i {
-  color: var(--neon-color);
-  transform: scale(1.2);
+  text-shadow: 0 0 5px var(--second), 0 0 10px var(--second);
+  transform: scale(1.1);
 }
 
 .text-logo {
@@ -295,7 +310,7 @@ nav .icon-menu {
 
 .text-logo .tx {
   position: relative;
-  color: var(--light-color);
+  color: var(--second);
   font-size: 70px;
   font-family: var(--noto-font);
   font-weight: 700;
@@ -304,7 +319,7 @@ nav .icon-menu {
 }
 
 .text-logo .arrowleft {
-  color: var(--lightning-color);
+  color: var(--light);
   position: absolute;
   top: 0;
   left: -40px;
@@ -312,7 +327,7 @@ nav .icon-menu {
 }
 
 .text-logo .arrowright {
-  color: var(--lightning-color);
+  color: var(--light);
   position: absolute;
   top: 0;
   left: 2%;
@@ -340,13 +355,13 @@ nav .icon-menu {
   left: 0;
   height: 100%;
   width: 100%;
-  color: var(--lightning-color);
-  background-color: var(--middle-color);
-  border-left: 2px solid var(--neon-color);
+  color: var(--light);
+  background-color: var(--bgcolor);
+  border-left: 2px solid var(--neon);
   animation: logoanime running 7s steps(8) infinite, titleanime2 paused 5s linear infinite;
   -webkit-box-reflect: below -40px linear-gradient(transparent 50%, #fff4);
   padding-right: 30px;
-  padding: 20px 15px;
+  padding: 20px 20px;
 }
 
 .text-logo .tx.rondev {
@@ -363,10 +378,10 @@ nav .icon-menu {
 .text-logo:hover .arrowright,
 .text-logo:hover .arrowleft {
   padding: 20px 0;
-  text-shadow: 0 0 5px var(--neon-color),
-    0 0 3px var(--neon-color);
+  text-shadow: 0 0 5px var(--light),
+    0 0 3px var(--light);
   pointer-events: none;
-  color: var(--second-color);
+  color: var(--bgcolor);
 }
 
 @keyframes titleanime2 {
@@ -376,10 +391,10 @@ nav .icon-menu {
   }
 
   18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
-    color: var(--lightning-color);
-    text-shadow: 0 0 10px var(--neon-color),
-      0 0 20px var(--neon-color),
-      0 0 40px var(--neon-color);
+    color: var(--light);
+    text-shadow: 0 0 10px var(--neon),
+      0 0 20px var(--neon),
+      0 0 40px var(--neon);
   }
 }
 
@@ -398,17 +413,11 @@ nav .icon-menu {
 .frontend {
   font-family: var(--signika-font);
   font-weight: 700;
-  color: var(--lightning-color);
+  color: var(--light);
   font-size: var(--front-title);
   position: relative;
-  margin-top: 30px;
+  margin-top: 40px;
   transition: 0.3s ease;
-}
-
-.frontend:hover {
-  pointer-events: none;
-  -webkit-filter: drop-shadow(0 0 5px var(--neon-color));
-  filter: drop-shadow(0 0 5px var(--neon-color));
 }
 
 .aside-r {
@@ -467,7 +476,7 @@ nav .icon-menu {
   font-weight: 700;
   transition: 0.3s;
   opacity: 0;
-  color: var(--lightning-color);
+  color: var(--light);
 }
 
 .media-icons li:nth-child(1):hover:before {
@@ -495,7 +504,7 @@ nav .icon-menu {
   display: inline-block;
   width: 75px;
   height: 75px;
-  background: var(--middle-color);
+  background: var(--bgcolor);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -509,7 +518,7 @@ nav .icon-menu {
 }
 
 .media-icons li:hover a {
-  background: var(--light-color);
+  background: var(--second);
 }
 
 .media-icons li a i {
@@ -551,7 +560,7 @@ nav .icon-menu {
 .media-icons li a .ico {
   transition: 0.25s;
   pointer-events: none;
-  color: var(--lightning-color);
+  color: var(--light);
 }
 
 .media-icons li a:hover .ico {
@@ -583,7 +592,6 @@ nav .icon-menu {
   width: 40%;
   margin: 30px;
   gap: 30px;
-
 }
 
 .img-content {
@@ -595,12 +603,10 @@ nav .icon-menu {
   align-items: center;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.20);
   border-radius: 25px;
-  box-shadow: 0 0 5px var(--neon-color), 0 0 20px var(--neon-color), 0 0 20px var(--neon-color);
+  box-shadow: 0 0 5px var(--neon), 0 0 20px var(--neon), 0 0 20px var(--neon);
 }
 
 .img-content img {
-  max-width: 97.5%;
-  max-height: 96%;
   width: 97.5%;
   height: 96%;
   z-index: 20;
@@ -620,7 +626,7 @@ nav .icon-menu {
 
 .img-content::before {
   content: "";
-  background-image: conic-gradient(var(--neon-color) 20deg,
+  background-image: conic-gradient(var(--neon) 20deg,
       transparent 180deg);
   width: 200%;
   height: 200%;
@@ -642,7 +648,7 @@ nav .icon-menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--neon-color);
+  color: var(--neon);
   z-index: 15;
 }
 
@@ -670,15 +676,14 @@ nav .icon-menu {
 
 .about-text h2 {
   font-weight: 700;
-  color: var(--neon-color);
+  color: var(--second);
   font-size: var(--sub-title);
-  text-shadow: 1px 1px 3px var(--primary-color);
 }
 
 .about-text p {
   padding-top: 5px;
   font-weight: 400;
-  color: #d3d3d3;
+  color: var(--light);
   font-size: var(--about);
   text-align: justify;
   line-height: 2;
@@ -686,11 +691,11 @@ nav .icon-menu {
 
 .about-text .btn {
   font-family: var(--poppins-font);
-  background-color: var(--lightning-color);
-  color: var(--primary-color);
+  background-color: var(--bgcolor);
+  color: var(--light);
   padding: 3px 5px;
   border-radius: 15px;
-  border: 2px solid var(--neon-color);
+  border: 2px solid var(--light);
   font-weight: 700;
   font-size: var(--text-buttons);
   margin-top: 5px;
@@ -698,13 +703,13 @@ nav .icon-menu {
   width: auto;
   align-self: flex-start;
   justify-content: center;
+  transition: 0.3s ease;
 }
 
 .about-text .btn:hover {
-  background-color: var(--neon-color);
-  color: var(--second-color);
-  box-shadow: 0 0 5px var(--neon-color), 0 0 5px var(--neon-color);
-  transition: 0.3s ease;
+  background-color: var(--light);
+  color: var(--bgcolor);
+  box-shadow: 0 0 5px var(--neon), 0 0 5px var(--neon);
 }
 
 /* courses */
@@ -715,13 +720,13 @@ nav .icon-menu {
 
 .card {
   position: relative;
-  background: var(--primary-color);
+  background: var(--light);
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2),
     0px 15px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   border-radius: 20px;
   width: 350px;
-  height: 450px;
+  height: 420px;
   -webkit-box-reflect: below 1px linear-gradient(transparent 90%, #0004);
 }
 
@@ -747,26 +752,26 @@ nav .icon-menu {
   font-size: var(--title);
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--light-color);
+  color: var(--primary);
   -webkit-box-reflect: below -50px linear-gradient(transparent 20%, #0004);
   line-height: 0.5;
   animation: titleanime 5s linear infinite;
-  padding: 40px;
+  padding: 50px;
   opacity: 1;
 }
 
 @keyframes titleanime {
   0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
     text-shadow: none;
-    color: var(--light-color);
-    opacity: 0.2;
+    color: var(--primary);
+    opacity: 0.1;
   }
 
   18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
-    color: var(--primary-color);
-    text-shadow: 0 0 10px var(--neon-color),
-      0 0 20px var(--neon-color),
-      0 0 30px var(--neon-color);
+    color: var(--light);
+    text-shadow: 0 0 10px var(--neon),
+      0 0 20px var(--neon),
+      0 0 30px var(--neon);
     opacity: 1;
   }
 }
@@ -778,9 +783,9 @@ nav .icon-menu {
   left: 0;
   height: 100%;
   width: 100%;
-  color: var(--lightning-color);
-  background-color: var(--middle-color);
-  border-left: 2px solid var(--neon-color);
+  color: var(--light);
+  background-color: var(--bgcolor);
+  border-left: 2px solid var(--neon);
   animation: logoanime2 10s steps(24) infinite;
 }
 
@@ -823,9 +828,9 @@ nav .icon-menu {
   font-size: var(--sub-title);
   line-height: 1.2;
   font-weight: 700;
-  color: var(--light-color);
+  color: var(--primary);
   z-index: 1;
-  opacity: 0.3;
+  opacity: 1;
   transition: 0.5s ease;
   position: relative;
   top: 5px;
@@ -835,9 +840,9 @@ nav .icon-menu {
   position: relative;
   font-size: var(--t-title);
   line-height: 1.5;
-  color: var(--lightning-color);
+  color: var(--second);
   z-index: 2;
-  opacity: 0.5;
+  opacity: 1;
   transition: 0.5s ease;
   margin: 5px;
 }
@@ -849,26 +854,26 @@ nav .icon-menu {
   bottom: -5px;
   height: 2px;
   width: 100%;
-  background: var(--lightning-color);
-  opacity: 0.1;
+  background: var(--bgcolor);
+  opacity: 1;
 }
 
 .card-content h4 {
   position: relative;
   font-size: var(--text);
-  color: var(--lightning-color);
+  color: var(--bgcolor);
   z-index: 2;
-  opacity: 0.5;
+  opacity: 1;
   transition: 0.5s ease;
   margin-top: 5px;
 }
 
 .card-content>p {
-  opacity: 0.5;
+  opacity: 1;
   transition: 0.5s ease;
-  color: var(--lightning-color);
+  color: var(--bgcolor);
   font-family: var(--signika-font);
-  font-weight: 400;
+  font-weight: 700;
   font-size: var(--text);
   display: flex;
   text-align: left;
@@ -884,17 +889,16 @@ nav .icon-menu {
   position: relative;
   font-size: var(--text);
   line-height: 1.2;
-  color: var(--light-color);
+  color: var(--bgcolor);
   z-index: 2;
-  opacity: 0.5;
+  opacity: 1;
   transition: 0.5s ease;
   margin-bottom: 15px;
 }
 
 .card:hover .card-content h2,
 .card:hover .card-content h3,
-.card:hover .card-content h4,
-.card:hover .card-content .number-course {
+.card:hover .card-content h4 {
   opacity: 1;
   transform: translateY(-14px);
 }
@@ -902,9 +906,9 @@ nav .icon-menu {
 .number-course {
   font-size: 500%;
   font-weight: 700;
-  color: var(--light-color);
+  color: var(--primary);
   z-index: 0;
-  opacity: 0.3;
+  opacity: 0.4;
   transition: 0.5s ease;
   position: absolute;
   bottom: 0;
@@ -913,24 +917,23 @@ nav .icon-menu {
 
 .card-content a {
   display: flex;
-  padding: 5px 10px;
-  background: var(--lightning-color);
-  color: var(--middle-color);
+  padding: 3px 5px;
+  background: var(--primary);
+  color: var(--light);
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 8px;
   transition: 0.5s ease;
   font-size: var(--text-buttons);
   align-self: center;
-  margin-bottom: 8px;
+  margin-bottom: 0;
   z-index: 2;
 }
 
 .card-content a:hover {
-  background: var(--middle-color);
-  color: var(--lightning-color);
-  box-shadow: 0 0 5px var(--neon-color), 0 0 5px var(--neon-color), 0 0 16px var(--neon-color);
-  transform: scale(1.1);
+  background: var(--light);
+  color: var(--primary);
+  box-shadow: 0 0 5px var(--bgcolor), 0 0 5px var(--bgcolor);
 }
 
 /* animation card */
@@ -954,9 +957,9 @@ nav .icon-menu {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, transparent, var(--neon-color));
+  background: linear-gradient(to right, transparent, var(--neon));
   animation: animatecard1 2s linear infinite;
-  box-shadow: 0 0 5px var(--neon-color), 0 0 5px var(--neon-color), 0 0 16px var(--neon-color);
+  box-shadow: 0 0 5px var(--neon), 0 0 5px var(--neon), 0 0 16px var(--neon);
 }
 
 @keyframes animatecard1 {
@@ -975,10 +978,10 @@ nav .icon-menu {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, var(--neon-color));
+  background: linear-gradient(to bottom, transparent, var(--neon));
   animation: animatecard2 2s linear infinite;
   animation-delay: 1s;
-  box-shadow: 0 0 5px var(--neon-color), 0 0 5px var(--neon-color), 0 0 16px var(--neon-color);
+  box-shadow: 0 0 5px var(--neon), 0 0 5px var(--neon), 0 0 16px var(--neon);
 }
 
 @keyframes animatecard2 {
@@ -997,9 +1000,9 @@ nav .icon-menu {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to left, transparent, var(--neon-color));
+  background: linear-gradient(to left, transparent, var(--neon));
   animation: animatecard3 2s linear infinite;
-  box-shadow: 0 0 5px var(--neon-color), 0 0 5px var(--neon-color), 0 0 16px var(--neon-color);
+  box-shadow: 0 0 5px var(--neon), 0 0 5px var(--neon), 0 0 16px var(--neon);
 }
 
 @keyframes animatecard3 {
@@ -1018,10 +1021,10 @@ nav .icon-menu {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(to top, transparent, var(--neon-color));
+  background: linear-gradient(to top, transparent, var(--neon));
   animation: animatecard4 2s linear infinite;
   animation-delay: 1s;
-  box-shadow: 0 0 5px var(--neon-color), 0 0 5px var(--neon-color), 0 0 16px var(--neon-color);
+  box-shadow: 0 0 5px var(--neon), 0 0 5px var(--neon), 0 0 16px var(--neon);
 }
 
 @keyframes animatecard4 {
@@ -1048,22 +1051,22 @@ nav .icon-menu {
   height: 10px;
   width: 20px;
   border-radius: 10px;
-  background-color: var(--neon-color);
+  background-color: var(--light);
 }
 
 .swiper-pagination-bullet-active {
-  box-shadow: 0 0 5px var(--neon-color), 0 0 5px var(--neon-color);
+  box-shadow: 0 0 5px var(--neon), 0 0 5px var(--neon);
 }
 
 .swiper-button-next, .swiper-button-prev {
   opacity: 0.7;
-  color: var(--neon-color);
+  color: var(--light);
   transition: all 0.3s ease;
 }
 
 .swiper-button-next:hover, .swiper-button-prev:hover {
   opacity: 1;
-  text-shadow: 0 0 5px var(--neon-color), 0 0 5px var(--neon-color), 0 0 16px var(--neon-color);
+  text-shadow: 0 0 5px var(--neon), 0 0 5px var(--neon);
 }
 
 /* certificates */
@@ -1107,7 +1110,7 @@ nav .icon-menu {
   height: 10px;
   width: 20px;
   border-radius: 10px;
-  background-color: var(--light-color);
+  background-color: var(--primary);
   z-index: 6;
   opacity: 1;
 }
@@ -1121,17 +1124,17 @@ input[type="radio"]::after {
   width: 20px;
   border-radius: 10px;
   z-index: 7;
-  background-color: var(--neon-color);
+  background-color: var(--light);
   opacity: 0.2;
 }
 
 .box-cert input[type="radio"]:checked::before {
-  background-color: var(--neon-color);
+  background-color: var(--light);
   opacity: 1;
 }
 
 .box-cert input[type="radio"]:checked::after {
-  box-shadow: 0 0 5px var(--neon-color), 0 0 5px var(--neon-color);
+  box-shadow: 0 0 5px var(--light), 0 0 5px var(--light);
   opacity: 1;
 }
 
@@ -1219,7 +1222,7 @@ input[type="radio"]::after {
   align-items: center;
   margin-bottom: 2px;
   font-size: var(--text-buttons);
-  color: var(--lightning-color);
+  color: var(--light);
   padding: 1px 1px;
   border-radius: 5px;
   margin: 0 5px;
@@ -1227,7 +1230,7 @@ input[type="radio"]::after {
 }
 
 .box-cert p span {
-  color: var(--lightning-color);
+  color: var(--light);
   padding: 1px 2px;
   border-radius: 5px;
   margin-right: 5px;
@@ -1239,40 +1242,42 @@ input[type="radio"]::after {
 .box-cert a {
   position: relative;
   font-family: var(--signika-font);
-  background: var(--lightning-color);
-  color: var(--second-color);
+  padding: 3px 5px;
+  background: var(--bgcolor);
+  color: var(--light);
+  border: 2px solid var(--light);
   font-weight: 700;
   transition: 0.4s ease;
   text-align: center;
   font-size: var(--text-buttons);
-  padding: 5px 5px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.20);
 }
 
 .box-cert a:hover {
-  background: var(--second-color);
-  color: var(--lightning-color);
+  background: var(--light);
+  color: var(--bgcolor);
+  box-shadow: 0 0 5px var(--neon), 0 0 5px var(--neon);
 }
 
 #cert-1 {
-  background-color: var(--second-color);
+  background-color: var(--primary);
 }
 
 #cert-2 {
-  background-color: var(--middle-color);
+  background-color: var(--primary);
 }
 
 #cert-3 {
-  background-color: var(--light-color);
+  background-color: var(--second);
 }
 
 #cert-4 {
-  background-color: var(--light-color);
+  background-color: var(--second);
 }
 
 #cert-5 {
-  background-color: var(--middle-color);
+  background-color: var(--primary);
 }
 
 #c1:checked~#cert-1, #c2:checked~#cert-2, #c3:checked~#cert-3, #c4:checked~#cert-4, #c5:checked~#cert-5 {
@@ -1333,10 +1338,10 @@ input[type="radio"]::after {
   align-items: space-evenly;
   width: 400px;
   height: 520px;
-  background-color: var(--middle-color);
+  background-color: var(--bgcolor);
   padding: 10px;
   border-radius: 25px;
-  box-shadow: -1px -1px 10px var(--second-color), 5px 5px var(--second-strong), 10px 10px var(--second-color), 14px 16px var(--middle-color), 15px 15px 10px var(--second-color);
+  box-shadow: 0px 0px 2px var(--dark), 3px 3px 3px var(--bgcolor), 4px 4px 4px var(--dark), 5px 5px 5px var(--bgcolor);
 }
 
 .form-content::before {
@@ -1344,7 +1349,7 @@ input[type="radio"]::after {
   position: absolute;
   width: 50%;
   height: 50%;
-  border: 2px solid var(--lightning-color);
+  border: 2px solid var(--primary);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1358,17 +1363,6 @@ input[type="radio"]::after {
   width: 100%;
   height: 100%;
   z-index: -1;
-}
-
-.box-form .form-content h2 {
-  margin-top: 20px;
-  font-family: var(--poppins-font);
-  color: var(--lightning-color);
-  font-weight: 700;
-  font-size: var(--sub-title);
-  text-align: center;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent 100%);
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.30);
 }
 
 .form-content form input, textarea, button {
@@ -1399,11 +1393,11 @@ input[type="radio"]::after {
 .form-content form input, textarea {
   font-family: var(--signika-font);
   font-weight: 700;
-  font-size: var(--text-buttons);
+  font-size: var(--text);
   height: 30px;
   border-radius: 5px;
   padding: 5px;
-  color: var(--second-color);
+  color: var(--primary);
   background-color: var();
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.30);
 }
@@ -1414,24 +1408,23 @@ input[type="radio"]::after {
 }
 
 .form-content form>input:focus, textarea:focus {
-  border: 2px solid var(--second-color);
-  box-shadow: 1px 1px 2px var(--neon-color), 1px 1px 5px var(--neon-color), 1px 1px 5px var(--neon-color);
+  border: 2px solid var(--primary);
+  box-shadow: 1px 1px 2px var(--primary), 1px 1px 5px var(--primary);
 }
 
 .form-content form button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: auto;
   align-self: center;
   font-family: var(--signika-font);
   font-size: var(--text);
   font-weight: 700;
-  height: 30px;
   border-radius: 5px;
-  padding: 5px;
-  color: var(--second-color);
-  background-color: var(--lightning-color);
+  padding: 5px 20px;
+  color: var(--primary);
+  background-color: var(--light);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.30);
   cursor: pointer;
   transition: 0.4s;
@@ -1440,9 +1433,9 @@ input[type="radio"]::after {
 }
 
 .form-content form button:hover {
-  background: var(--middle-color);
-  color: var(--lightning-color);
-  box-shadow: 0 0 5px var(--neon-color), 0 0 5px var(--neon-color);
+  background: var(--primary);
+  color: var(--light);
+  box-shadow: 0 0 5px var(--primary), 0 0 5px var(--primary);
 }
 
 .box-img {
@@ -1546,7 +1539,7 @@ input[type="radio"]::after {
   font-weight: 700;
   transition: 0.5s;
   opacity: 0;
-  color: var(--lightning-color);
+  color: var(--light);
 }
 
 .box-icons li:hover::before {
@@ -1559,7 +1552,7 @@ input[type="radio"]::after {
 }
 
 .box-icons li:nth-child(1):hover a {
-  background-color: var(--light-color);
+  background-color: var(--second);
   color: #0e76a8;
 }
 
@@ -1568,7 +1561,7 @@ input[type="radio"]::after {
 }
 
 .box-icons li:nth-child(2):hover a {
-  background-color: var(--light-color);
+  background-color: var(--second);
   color: #171515;
 }
 
@@ -1577,7 +1570,7 @@ input[type="radio"]::after {
 }
 
 .box-icons li:nth-child(3):hover a {
-  background-color: var(--light-color);
+  background-color: var(--second);
   color: #e4405f;
 }
 
@@ -1586,11 +1579,11 @@ input[type="radio"]::after {
   display: inline-block;
   width: 130px;
   height: 130px;
-  background: var(--second-color);
+  background: var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--lightning-color);
+  color: var(--light);
   border-radius: 10px;
   text-decoration: none;
   margin: 16px;
@@ -1621,7 +1614,7 @@ input[type="radio"]::after {
 /* footer */
 
 .footer {
-  background: var(--second-color);
+  background: var(--primary);
   position: relative;
   height: 200px;
   display: flex;
@@ -1658,7 +1651,7 @@ input[type="radio"]::after {
 }
 
 .footer .container-footer .box-footer p {
-  color: var(--lightning-color);
+  color: var(--light);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1677,14 +1670,14 @@ input[type="radio"]::after {
 
 .footer .container-footer .footer-icons li a i {
   font-size: var(--front-title);
-  color: var(--lightning-color);
+  color: var(--light);
   transition: 0.3s ease;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .footer .container-footer .footer-icons li a:hover i {
-  color: var(--neon-color);
-  transform: scale(1.3);
+  text-shadow: 0 0 5px var(--second), 0 0 10px var(--second);
+  transform: scale(1.1);
 }
 
 .footer .container-footer .footer-links {
@@ -1697,100 +1690,28 @@ input[type="radio"]::after {
 }
 
 .footer .container-footer .footer-links li {
-  border-right: 1px solid var(--lightning-color);
+  border-right: 1px solid var(--light);
   padding-right: 5px;
 }
 
 .footer .container-footer .footer-links li a {
   font-size: var(--footer);
-  color: var(--lightning-color);
+  color: var(--light);
   transition: 0.3s ease;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .footer .container-footer .footer-links li a:hover {
-  color: var(--neon-color);
+  text-shadow: 0 0 5px var(--second), 0 0 10px var(--second);
+  text-transform: uppercase;
 }
 
-/* email */
-
-#email {
-  height: 100vh;
-}
-
-.box-email {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.form-email {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 60px;
-  background-color: var(--middle-color);
-  padding: 25px;
-  border-radius: 25px;
-  box-shadow: rgba(1, 40, 46, 0.5) 5px 5px, rgba(1, 40, 46, 0.4) 10px 10px, rgba(1, 40, 46, 0.3) 18px 18px, rgba(1, 40, 46, 0.2) 24px 24px;
-}
-
-.box-email .form-email h2 {
-  width: 100%;
-  font-family: var(--poppins-font);
-  color: var(--lightning-color);
-  font-weight: 700;
-  font-size: var(--title);
-  text-align: center;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent 100%);
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.30);
-}
-
-.box-email .form-email p {
-  width: 100%;
-  font-family: var(--signika-font);
-  color: var(--lightning-color);
-  font-weight: 700;
-  font-size: var(--sub-title);
-  text-align: center;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.30);
-}
-
-
-.box-email .form-email a {
-  display: flex;
-  text-align: center;
-  font-family: var(--signika-font);
-  font-weight: 700;
-  font-size: 18px;
-  border-radius: 5px;
-  padding: 5px 16px;
-  color: var(--second-color);
-  border: 2px solid var(--second-color);
-  background-color: var(--lightning-color);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.30);
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.box-email .form-email a:hover {
-  background: var(--middle-color);
-  color: var(--lightning-color);
-  box-shadow: 1px 1px 5px var(--middle-color), 1px 1px 5px var(--neon-color);
-  border: 2px solid var(--light-color);
-}
 
 /* button back to top */
 
 .back-to-top {
-  background: var(--lightning-color);
-  color: var(--middle-color);
+  background: var(--light);
+  color: var(--primary);
   position: fixed;
   right: 30px;
   bottom: 16px;
@@ -1807,7 +1728,16 @@ input[type="radio"]::after {
   align-items: center;
   font-size: var(--t-title);
   padding: 5px;
+  transition: 0.2s;
 }
+
+.back-to-top:hover i,
+.back-to-top:hover {
+  padding: 5px;
+  background: var(--second);
+  color: var(--light);
+}
+
 
 .back-to-top.show {
   visibility: visible;
@@ -2136,6 +2066,14 @@ input[type="radio"]::after {
     margin: 0;
   }
 
+  .footer .container-footer .footer-icons {
+    flex-direction: column;
+    width: 15%;
+    gap: 10px;
+    margin: 0;
+    padding: 5px;
+  }
+
   .footer .container-footer .footer-links {
     margin: 0px;
   }
@@ -2155,13 +2093,13 @@ input[type="radio"]::after {
 
   :root {
     /* font sizes */
-    --title: 50px;
+    --title: 40px;
     --front-title: 22px;
     --sub-title: 22px;
     --t-title: 14px;
     --about: 12px;
     --text: 12px;
-    --text-buttons: 12px;
+    --text-buttons: 11px;
   }
 
 
@@ -2182,6 +2120,10 @@ input[type="radio"]::after {
   .text-logo .arrowright {
 
     margin-left: -5px;
+  }
+
+  .text-logo .tx {
+    -webkit-box-reflect: below -30px linear-gradient(transparent 50%, #fff4);
   }
 
   .circle {
@@ -2265,17 +2207,23 @@ input[type="radio"]::after {
   }
 
   .card {
-    height: 320px;
+    height: 400px;
 
   }
 
   .swiper {
     width: 90%;
-    padding: 50px 20px;
+    padding: 30px;
+  }
+
+  .card-content a {
+    padding: 2px 5px;
+    margin-bottom: 0px;
   }
 
   .text-title .courses-title {
-    line-height: 1;
+    line-height: 1.2;
+    padding: 30px;
   }
 
 
@@ -2333,17 +2281,9 @@ input[type="radio"]::after {
   }
 
   .box-cert label {
-    height: 65%;
+    height: 90%;
     align-self: center;
     margin-bottom: 50px;
-  }
-
-  .footer .container-footer .footer-icons {
-    flex-direction: column;
-    width: 15%;
-    gap: 10px;
-    margin: 0;
-    padding: 5px;
   }
 
   .footer {
@@ -2359,9 +2299,9 @@ input[type="radio"]::after {
     --title: 40px;
     --sub-title: 24px;
     --front-title: 24px;
-    --t-title: 18px;
+    --t-title: 16px;
     --about: 12px;
-    --text: 14px;
+    --text: 13px;
     --text-buttons: 12px;
     --footer: 14px;
   }
@@ -2541,7 +2481,7 @@ input[type="radio"]::after {
 
 
   .text-title .courses-title {
-    padding: 25px;
+    padding: 30px;
   }
 
   .layout-contact {
@@ -2780,8 +2720,7 @@ input[type="radio"]::after {
   }
 
   .text-title .courses-title {
-    padding: 20px;
-    line-height: 1.2;
+    padding: 30px;
   }
 
   .card {
@@ -2892,8 +2831,7 @@ input[type="radio"]::after {
   }
 
   .footer .container-footer .footer-icons {
-    gap: 15px;
-    margin: 5px;
+    gap: 5px;
     padding: 5px;
   }
 
@@ -2967,6 +2905,10 @@ input[type="radio"]::after {
       left: 2%;
       margin-left: 5px;
     }
+  }
+
+  .text-logo .tx {
+    -webkit-box-reflect: below -23px linear-gradient(transparent 50%, #fff4);
   }
 
   .aside .packicons {
