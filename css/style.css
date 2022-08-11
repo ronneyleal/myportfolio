@@ -583,6 +583,10 @@ nav .icon-menu {
 
 /* ABOUT */
 
+#about.container {
+  align-items: flex-start;
+}
+
 .about-img {
   display: flex;
   flex-direction: column;
@@ -590,7 +594,7 @@ nav .icon-menu {
   align-items: center;
   position: relative;
   width: 40%;
-  margin: 30px;
+  margin: auto 30px;
   gap: 30px;
 }
 
@@ -665,13 +669,14 @@ nav .icon-menu {
 .about-text {
   position: relative;
   width: 55%;
+  height: 100%;
   padding: 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: auto;
-  margin-bottom: auto;
+  justify-content: flex-start;
+  flex-grow: 1;
+
 }
 
 .about-text h2 {
@@ -681,24 +686,27 @@ nav .icon-menu {
 }
 
 .about-text p {
-  padding-top: 5px;
   font-weight: 400;
   color: var(--light);
-  font-size: var(--about);
-  text-align: justify;
+  font-size: auto;
+  font-size: calc(70vh / 45);
   line-height: 2;
+  text-align: justify;
+  display: flex;
+  flex-grow: 1;
+  padding: 5px;
 }
 
 .about-text .btn {
   font-family: var(--poppins-font);
   background-color: var(--bgcolor);
   color: var(--light);
-  padding: 3px 5px;
-  border-radius: 15px;
+  padding: 5px 8px;
+  border-radius: 10px;
   border: 2px solid var(--light);
   font-weight: 700;
   font-size: var(--text-buttons);
-  margin-top: 5px;
+  margin: 5px 0px;
   display: flex;
   width: auto;
   align-self: flex-start;
@@ -1747,14 +1755,6 @@ input[type="radio"]::after {
 
 /* RESPONSIVO */
 
-/* layout responsive */
-/* home responsive */
-/* about responsive  */
-/* cousers responsive  */
-/* certificates responsive  */
-/* contact responsive  */
-/* footer responsive  */
-
 @media (min-width: 1440px) {}
 
 @media (max-width: 1440px) {
@@ -1772,10 +1772,6 @@ input[type="radio"]::after {
   /* layout responsive */
   main, nav.nav, .container, .footer .container-footer {
     max-width: 1200px;
-  }
-
-  .about-text p {
-    line-height: 1.8;
   }
 
   .form-content {
@@ -1880,12 +1876,13 @@ input[type="radio"]::after {
     gap: 50px;
   }
 
-  .about-text p {
-    line-height: 1.8;
-  }
-
   .card {
     height: 400px;
+  }
+
+  .about-text p {
+    font-size: calc(80vh / 45);
+    line-height: 2;
   }
 
   /* footer responsive  */
@@ -2046,6 +2043,7 @@ input[type="radio"]::after {
   }
 
   .about-text p {
+    font-size: calc(80vh / 45);
     line-height: 1.8;
   }
 
@@ -2171,7 +2169,7 @@ input[type="radio"]::after {
   }
 
   .about-text {
-    padding: 10px;
+    padding: 0;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -2181,9 +2179,8 @@ input[type="radio"]::after {
   }
 
   .about-text p {
-    line-height: 1.5;
-    padding-top: 0;
-    padding: 0;
+    font-size: calc(90vh / 45);
+    line-height: 1.8;
   }
 
   .about-text .btn {
@@ -2191,10 +2188,6 @@ input[type="radio"]::after {
     margin: 5px;
     align-self: flex-end;
     margin-left: auto;
-  }
-
-  .about-text {
-    padding: 0px;
   }
 
   .about-img {
@@ -2207,7 +2200,7 @@ input[type="radio"]::after {
   }
 
   .card {
-    height: 400px;
+    height: 300px;
 
   }
 
@@ -2387,7 +2380,7 @@ input[type="radio"]::after {
 
   .about-img {
     flex-direction: row;
-    width: 90%;
+    width: 75%;
     gap: 20px;
     margin: 0;
     margin: 10px;
@@ -2417,16 +2410,16 @@ input[type="radio"]::after {
     flex-wrap: nowrap;
   }
 
-  .about-text p {
-    line-height: 1.7;
-    padding-top: 5px;
-  }
-
   .about-text .btn {
     width: auto;
     align-self: flex-end;
     margin: 5px;
     margin-left: auto;
+  }
+
+  .about-text p {
+    font-size: calc(70vh / 45);
+    line-height: 1.7;
   }
 
   .card {
@@ -2642,15 +2635,6 @@ input[type="radio"]::after {
     margin-left: auto;
   }
 
-  .about-text h2 {
-    margin-top: 20px;
-  }
-
-  .about-text p {
-    line-height: 1.6;
-    padding-top: 5px;
-  }
-
 }
 
 @media (max-width: 540px) {
@@ -2711,8 +2695,8 @@ input[type="radio"]::after {
   }
 
   .about-text p {
-    line-height: 1.6;
-    padding-top: 5px;
+    font-size: calc(60vh / 45);
+    line-height: 1.7;
   }
 
   #courses.container {
@@ -2953,60 +2937,13 @@ input[type="radio"]::after {
     transform: translate(0%, 100%);
   }
 
-  #about.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .about-text {
-    width: 100%;
-    height: auto;
-    margin: 0px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0 10px;
-    margin-top: 20px;
-  }
-
-  .about-text h2 {
-    font-size: 22px;
-    margin-top: 10px;
-    order: 1;
-  }
-
   .about-text p {
-    font-size: 11px;
-    line-height: 1.8;
-    order: 3;
-  }
-
-  .about-text .btn {
-    margin: 1px;
-    font-size: 11px;
-    order: 2;
-  }
-
-  .about-img {
-    height: 30%;
-  }
-
-  .img-content:nth-child(2) {
-    height: 100%;
-    width: 85%;
+    font-size: calc(70vh / 45);
+    line-height: 1.7;
   }
 
   .card {
-    height: 310px;
-  }
-
-  .box-cert a {
-    padding: 2px 2px;
-  }
-
-  .box-img {
-    height: 25%;
+    height: 360px;
   }
 
   .layout-contact {
@@ -3015,8 +2952,12 @@ input[type="radio"]::after {
     flex-wrap: wrap;
     gap: 0;
     align-items: center;
-    width: 90%;
-    justify-content: center;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .box-img {
+    display: none;
   }
 
   .box-form {
@@ -3124,7 +3065,7 @@ input[type="radio"]::after {
 
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
 
   :root {
     /* font sizes */
@@ -3141,7 +3082,7 @@ input[type="radio"]::after {
 
   /* layout responsive */
   main, nav.nav, .container, .footer .container-footer {
-    max-width: 320px;
+    max-width: 300px;
   }
 
   .about-img {
@@ -3150,16 +3091,19 @@ input[type="radio"]::after {
 
   .about-text h2 {
     font-size: 20px;
-    margin-top: 0px;
-  }
-
-  .about-text p {
-    font-size: 9px;
-    line-height: 1.5;
   }
 
   .about-text .btn {
     font-size: 9px;
+  }
+
+  .about-text p {
+    font-size: calc(65vh / 45);
+    line-height: 1.6;
+  }
+
+  .card {
+    height: 320px;
   }
 
   .layout-contact {
@@ -3168,10 +3112,6 @@ input[type="radio"]::after {
     gap: 0px;
     width: 90%;
     justify-content: space-between;
-  }
-
-  .box-img {
-    display: none;
   }
 
   .box-form {
@@ -3273,4 +3213,22 @@ input[type="radio"]::after {
     padding-left: 30px;
     line-height: 1.5;
   }
+}
+
+@media (max-width: 320px) {
+
+  /* layout responsive */
+  main, nav.nav, .container, .footer .container-footer {
+    max-width: 280px;
+  }
+
+  .about-text p {
+    font-size: calc(65vh / 45);
+    line-height: 1.5;
+  }
+
+  .card {
+    height: 280px;
+  }
+
 }
