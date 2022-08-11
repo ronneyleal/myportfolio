@@ -3124,117 +3124,153 @@ input[type="radio"]::after {
 
 }
 
+@media (max-width: 360px) {
+
+  :root {
+    /* font sizes */
+    --title: 28px;
+    --sub-title: 21px;
+    --front-title: 20px;
+    --t-title: 12px;
+    --about: 10px;
+    --text: 11px;
+    --text-buttons: 10px;
+    --footer: 12px;
+  }
 
 
+  /* layout responsive */
+  main, nav.nav, .container, .footer .container-footer {
+    max-width: 320px;
+  }
 
-/* .layout-contact {
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 0px;
-  width: 90%;
-  justify-content: space-between;
+  .about-img {
+    height: 25%;
+  }
+
+  .about-text h2 {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+
+  .about-text p {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .about-text .btn {
+    font-size: 9px;
+  }
+
+  .layout-contact {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0px;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .box-img {
+    display: none;
+  }
+
+  .box-form {
+    margin-left: 0px;
+  }
+
+  .form-content {
+    width: 210px;
+    height: 260px;
+    margin: 0;
+  }
+
+  .form-content form {
+    gap: 10px;
+    padding: 0px;
+    padding-top: 5px;
+  }
+
+  .form-content form input, textarea {
+    height: 25px;
+    padding: 3px;
+  }
+
+  .form-content form button {
+    width: 55px;
+    height: 20px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  .box-icons {
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .box-icons li a {
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+  }
+
+  .box-icons li a i {
+    font-size: 50px;
+  }
+
+  .box-icons li::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(0);
+    opacity: 0;
+    font-size: 50px;
+  }
+
+  .box-icons li:hover::before {
+    opacity: 1;
+    left: 50%;
+    top: -35%;
+  }
+
+  .footer .container-footer {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 0px;
+  }
+
+  .footer .container-footer .box-footer {
+    width: 50%;
+    gap: 5px 0;
+    margin: 0;
+    padding: 5px;
+  }
+
+  .footer .container-footer .box-footer p {
+    font-size: 10px;
+  }
+
+  .footer .container-footer .box-footer a img {
+    width: 100%;
+  }
+
+  .footer .container-footer .footer-icons {
+    width: 40%;
+    gap: 15px;
+    margin: 5px;
+    padding: 5px;
+    flex-direction: row;
+  }
+
+  .footer .container-footer .footer-links {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 40%;
+    gap: 0;
+    padding-left: 30px;
+    line-height: 1.5;
+  }
 }
-
-.box-img {
-  display: none;
-}
-
-.box-form {
-  margin-left: 0px;
-}
-
-.form-content {
-  width: 220px;
-  height: 280px;
-  margin: 0;
-}
-
-.form-content form {
-  gap: 10px;
-  padding: 0px;
-  padding-top: 5px;
-}
-
-.form-content form input, textarea {
-  height: 25px;
-  padding: 3px;
-}
-
-.form-content form button {
-  width: 55px;
-  height: 20px;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-
-.box-icons {
-  flex-direction: row;
-  margin: 0;
-  justify-content: center;
-}
-
-.box-icons li a {
-  width: 75px;
-  height: 75px;
-  margin: 5px;
-}
-
-.box-icons li a i {
-  font-size: 50px;
-}
-
-.box-icons li::before {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotateZ(0);
-  opacity: 0;
-  font-size: 50px;
-}
-
-.box-icons li:hover::before {
-  opacity: 1;
-  left: 50%;
-  top: -35%;
-}
-
-.footer .container-footer {
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  gap: 0px;
-}
-
-.footer .container-footer .box-footer {
-  width: 50%;
-  gap: 5px 0;
-  margin: 0;
-  padding: 5px;
-}
-
-.footer .container-footer .box-footer p {
-  font-size: 10px;
-}
-
-.footer .container-footer .box-footer a img {
-  width: 100%;
-}
-
-.footer .container-footer .footer-icons {
-  width: 40%;
-  gap: 15px;
-  margin: 5px;
-  padding: 5px;
-  flex-direction: row;
-}
-
-.footer .container-footer .footer-links {
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: nowrap;
-  width: 40%;
-  gap: 0;
-  padding-left: 30px;
-  line-height: 1.5;
-} */
