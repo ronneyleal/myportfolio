@@ -2385,13 +2385,6 @@ input[type="radio"]::after {
     line-height: 1.8;
   }
 
-  .about-text .btn {
-    width: auto;
-    margin: 5px;
-    align-self: flex-end;
-    margin-left: auto;
-  }
-
   .about-img {
     width: 35%;
     margin: 20px;
@@ -2610,13 +2603,14 @@ input[type="radio"]::after {
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: nowrap;
+    position: relative;
   }
 
   .about-text .btn {
     width: auto;
-    align-self: flex-end;
-    margin: 5px;
-    margin-left: auto;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
 
   .about-text p {
@@ -2828,13 +2822,6 @@ input[type="radio"]::after {
     width: 100%;
     height: auto;
     margin: 0px;
-  }
-
-  .about-text .btn {
-    width: auto;
-    align-self: flex-end;
-    margin: 5px;
-    margin-left: auto;
   }
 
 }
