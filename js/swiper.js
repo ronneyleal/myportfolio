@@ -5,7 +5,6 @@ var swiper = new Swiper('.swiper', {
   initialSlide: 0,
   loop: true,
   centeredSlides: false,
-  centeredSlidesBounds: true,
   // 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'creative' | 'cards'
   scrollbar: {
     el: '.swiper-scrollbar'

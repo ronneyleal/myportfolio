@@ -135,7 +135,7 @@ nav .menu {
 
 nav .menu ul {
   display: flex;
-  gap: 30px;
+  gap: 15px;
 }
 
 /*----MOSTRAR MENU ------*/
@@ -162,7 +162,7 @@ nav.show .menu ul {
 }
 
 nav.show ul.grid-nav {
-  gap: 30px;
+  gap: 10px;
 }
 
 
@@ -581,6 +581,207 @@ nav .icon-menu {
   }
 }
 
+/* PROJECTS */
+
+#projects.container {
+  align-items: center;
+  flex-direction: column;
+}
+
+#projects .text-title {
+  flex-grow: 0;
+}
+
+#projects .swiper-wrapper {
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+#projects .projects-content {
+  padding: 10px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#projects .projects-content h3 {
+  font-size: var(--t-title);
+  font-weight: 700;
+  color: var(--primary);
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#projects .projects-content .img-project {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#projects .projects-content .img-project video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#projects .projects-content p {
+  flex-grow: 1;
+  color: var(--bgcolor);
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  text-align: justify;
+  line-height: 1.2;
+  align-items: center;
+}
+
+#projects .projects-content ul {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#projects .projects-content ul li i {
+  font-size: var(--sub-title);
+  color: var(--bgcolor);
+  transition: 0.3s ease;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#projects .projects-content a {
+  flex-grow: 0;
+  display: flex;
+  padding: 5px 8px;
+  background: var(--primary);
+  color: var(--light);
+  font-weight: 700;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  font-size: 12px;
+  align-self: center;
+  margin: 0 15px;
+}
+
+#projects .projects-content a:hover {
+  background: var(--light);
+  color: var(--primary);
+  box-shadow: 0 0 5px var(--bgcolor), 0 0 5px var(--bgcolor);
+}
+
+#projects .card>span {
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+#projects .card:hover>span {
+  opacity: 1;
+}
+
+#projects .card>span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--second));
+  animation: animatecard1 2s linear infinite;
+  box-shadow: 0 0 5px var(--second), 0 0 5px var(--second), 0 0 16px var(--second);
+}
+
+@keyframes animatecard1 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#projects .card>span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--second));
+  animation: animatecard2 2s linear infinite;
+  animation-delay: 1s;
+  box-shadow: 0 0 5px var(--second), 0 0 5px var(--second), 0 0 16px var(--second);
+}
+
+@keyframes animatecard2 {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+#projects .card>span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, transparent, var(--second));
+  animation: animatecard3 2s linear infinite;
+  box-shadow: 0 0 5px var(--second), 0 0 5px var(--second), 0 0 16px var(--second);
+}
+
+@keyframes animatecard3 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#projects .card>span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, var(--second));
+  animation: animatecard4 2s linear infinite;
+  animation-delay: 1s;
+  box-shadow: 0 0 5px var(--second), 0 0 5px var(--second), 0 0 16px var(--second);
+}
+
+@keyframes animatecard4 {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* end animation card */
+
 /* ABOUT */
 
 #about.container {
@@ -604,6 +805,7 @@ nav .icon-menu {
   display: flex;
   justify-content: center;
   height: 45%;
+  padding: 6px;
   align-items: center;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.20);
   border-radius: 25px;
@@ -611,8 +813,8 @@ nav .icon-menu {
 }
 
 .img-content img {
-  width: 97.5%;
-  height: 96%;
+  width: 100%;
+  height: 100%;
   z-index: 20;
   object-fit: cover;
   border-radius: 25px;

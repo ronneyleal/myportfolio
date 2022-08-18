@@ -32,6 +32,7 @@ const scrollReveal = ScrollReveal({
 scrollReveal.reveal(
   `#home .text-logo, #home .frontend, #home .packicons,
   #home .circle, #home .media-icons li,
+  #projects .text-title, #projects .box-projects,
   #about .about-img, #about .about-text,
   #courses .text-title, #courses .swiper,
   #certificates .text-title, #certificates .box-cert,
