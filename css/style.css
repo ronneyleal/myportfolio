@@ -11,11 +11,6 @@ a {
   text-decoration: none;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
 ul {
   list-style: none;
 }
@@ -23,19 +18,7 @@ ul {
 /* VARIABLES */
 :root {
 
-  /* green */
-  /* --primary-color: #0F0E0E;
-  --second-strong: #00191d;
-  --second-color: #002c33;
-  --middle-color: #01444e;
-  --light-color: #478f9a;
-  --lightning-color: #F4F2F4;
-  --neon: #00fcff;
-  --gray-color: #d3d3d3; */
-
-
   --header-height: 4rem;
-  /*color dark mode */
   --bgcolor: #01444e;
   --primary: #002c33;
   --second: #478f9a;
@@ -62,10 +45,6 @@ ul {
   --text-buttons: 13px;
   --footer: 16px;
 }
-
-/* .dark-mode:root {
- 
-} */
 
 body {
   height: 100vh;
@@ -255,8 +234,8 @@ nav .icon-menu {
 .container {
   height: 100vh;
   display: flex;
-  padding-top: 8rem;
-  padding-bottom: 5rem;
+  padding-top: var(--header-height);
+  padding-bottom: 3rem;
   position: relative;
   align-items: center;
   justify-content: space-evenly;
@@ -937,7 +916,7 @@ nav .icon-menu {
   border-radius: 20px;
   width: 350px;
   height: 420px;
-  -webkit-box-reflect: below 1px linear-gradient(transparent 90%, #0004);
+  -webkit-box-reflect: below 1px linear-gradient(transparent 92%, #FFF2);
 }
 
 .card::before {
@@ -1012,7 +991,6 @@ nav .icon-menu {
 .swiper {
   width: 90%;
   padding: 30px;
-  padding-bottom: 60px;
 }
 
 .swiper-wrapper {
@@ -1283,7 +1261,6 @@ nav .icon-menu {
 
 #certificates.container {
   flex-direction: column;
-  gap: 3%;
 }
 
 #certificates .courses-title::before {
@@ -1652,18 +1629,18 @@ input[type="radio"]::after {
   grid-area: box-img;
   position: relative;
   height: 90%;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-self: center;
   margin: 20px;
-  margin-top: 50px;
-
 }
 
 .box-img img {
+  position: absolute;
   border-radius: 25px;
   position: absolute;
   height: 100%;
+  width: 100%;
   object-fit: cover;
   -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, transparent, #0004);
 }
@@ -1678,7 +1655,7 @@ input[type="radio"]::after {
   background: #fff;
   z-index: -1;
   border-radius: 25px;
-  filter: blur(15px);
+  filter: blur(10px);
 }
 
 .box-img::after {
@@ -1690,7 +1667,7 @@ input[type="radio"]::after {
   right: -1px;
   background: #fff;
   z-index: -2;
-  filter: blur(15px);
+  filter: blur(10px);
   border-radius: 25px;
 }
 
@@ -1981,11 +1958,6 @@ input[type="radio"]::after {
     height: 460px;
   }
 
-  .container {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
-  }
-
   .form-content form {
     gap: 20px;
     padding: 10px;
@@ -1993,7 +1965,7 @@ input[type="radio"]::after {
   }
 
   .box-img {
-    width: 90%;
+    width: 75%;
   }
 
   .box-icons li a {
@@ -2025,11 +1997,11 @@ input[type="radio"]::after {
 
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1360px) {
 
   :root {
     /* font sizes */
-    --title: 50px;
+    --title: 45px;
     --front-title: 25px;
     --sub-title: 25px;
     --t-title: 16px;
@@ -2043,12 +2015,6 @@ input[type="radio"]::after {
   main, nav.nav, .container, .footer .container-footer {
     max-width: 1100px;
   }
-
-  .container {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
-  }
-
 
   /* home responsive */
 
@@ -2075,15 +2041,15 @@ input[type="radio"]::after {
   /* about responsive  */
 
   .about-img {
-    gap: 50px;
+    gap: 15px;
   }
 
   .card {
-    height: 400px;
+    height: 350px;
   }
 
   .about-text p {
-    font-size: calc(80vh / 45);
+    font-size: calc(80vh / 40);
     line-height: 2;
   }
 
@@ -2104,7 +2070,6 @@ input[type="radio"]::after {
 
   :root {
     /* font sizes */
-    --title: 50px;
     --sub-title: 22px;
     --front-title: 24px;
     --t-title: 16px;
@@ -2117,11 +2082,6 @@ input[type="radio"]::after {
   /* layout responsive */
   main, nav.nav, .container, .footer .container-footer {
     max-width: 1000px;
-  }
-
-  .container {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
   }
 
   .media-icons li a {
@@ -2145,14 +2105,13 @@ input[type="radio"]::after {
   }
 
   .card {
-    height: 400px;
+    height: 340px;
 
   }
 
   .swiper {
     width: 90%;
     padding: 30px;
-    padding-bottom: 50px;
   }
 
   .box-img {
@@ -2188,7 +2147,6 @@ input[type="radio"]::after {
 
   :root {
     /* font sizes */
-    --title: 50px;
     --sub-title: 22px;
     --front-title: 24px;
     --t-title: 15px;
@@ -2201,11 +2159,6 @@ input[type="radio"]::after {
   /* layout responsive */
   main, nav.nav, .container, .footer .container-footer {
     max-width: 900px;
-  }
-
-  .container {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
   }
 
   /* home responsive */
@@ -2920,7 +2873,6 @@ input[type="radio"]::after {
   .swiper {
     width: 90%;
     padding: 30px;
-    padding-bottom: 60px;
   }
 
   .box-cert .linkcert {
@@ -3004,7 +2956,7 @@ input[type="radio"]::after {
     justify-content: left;
     flex-wrap: wrap;
     width: 40%;
-    gap: 12px;
+    gap: 8x;
   }
 
   .footer .container-footer {
@@ -3257,7 +3209,7 @@ input[type="radio"]::after {
     width: 40%;
     gap: 0;
     padding-left: 30px;
-    line-height: 1.5;
+    line-height: 1.2;
   }
 
 }
@@ -3408,7 +3360,7 @@ input[type="radio"]::after {
     width: 40%;
     gap: 0;
     padding-left: 30px;
-    line-height: 1.5;
+    line-height: 1.1;
   }
 }
 
