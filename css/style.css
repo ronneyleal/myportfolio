@@ -3234,6 +3234,14 @@ input[type="radio"]::after {
     max-width: 300px;
   }
 
+  #projects .projects-content p {
+    font-size: 10px;
+  }
+
+  #projects .projects-content ul {
+    gap: 10px;
+  }
+
   .about-img {
     height: 25%;
   }
